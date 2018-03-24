@@ -34,6 +34,7 @@ io.sockets.on('connection', function (socket) {
 
 });
 
-
+// Au dessus: c'est l'initialisation//
+// cela permet de connecter le node.js au javascript et au html
 
 server.listen(8080);
