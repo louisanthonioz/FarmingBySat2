@@ -2,10 +2,16 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
-var path = require('path');
 var express = require('express');
 var formidable = require('formidable');
+var nodemailer = require('nodemailer');
+var querystring = require('querystring');
+var bodyParser = require('body-parser');
+var ejs= require('ejs');
 var app = express();
+
+
+
 
 
 // Creation of the server
@@ -20,6 +26,9 @@ app.get('/', function(req, res,next) {
     res.sendFile(__dirname + '/Views/index.html');
 
 });
+
+
+
  
  var io = require('socket.io').listen(server);
 
@@ -32,8 +41,37 @@ io.sockets.on('connection', function (socket) {
     // Alert the server
     console.log("Un client s'est connecté");
 
-});
+
+    
+ 
+   // en dessous recuperation de la fonction joindre fichier et traitement de la fonction
+
+   socket.on('joindrefichier', function(message){
+   	socket.emit('message', 'le fichier est en cours');
+   	console.log('l\'administrateur a envoyé un message : ' +message);
+
+   });
+
+  });
+
+
+
+
+
+
+
+ 
+
+
+
+
+
 
 
 
 server.listen(8080);
+
+
+
+
+

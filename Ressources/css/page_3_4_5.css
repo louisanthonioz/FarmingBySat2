@@ -1,0 +1,285 @@
+
+/**/
+/**/
+/**/
+/*EN DESSOUS LA PAGE 5*/
+/**/
+/**/
+/**/
+/**/
+
+
+#thirdStep
+{
+	
+    display: block;
+    margin: 2% auto 2% 4%;
+    padding: 2%;
+    height: auto;
+    width: 70vh;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 16px grey;
+    border-radius: 5px;
+    position: relative;
+    margin: 1% auto 1% auto;
+    text-align: center;
+
+
+}
+
+
+#recherche
+{
+	display: inline-block;
+    position: relative;
+    margin-left: 30px ;
+    margin-right: auto;
+    text-align: left;
+
+}
+
+#nouveauClient, #nouveauClientButton, #clientTraite, #clientTraiteButton, #envoyerButton, #envoyerButton, #joindreButton 
+{
+	display: inline-block;
+	
+	background : none;
+	font-size: 2vh;
+    border-radius: 1vh;
+    height: 6vh;
+    min-width: 5vh;
+
+
+}
+
+ #ouvrirAncienButton, #ouvrirNouveauButton
+ {
+ 	display: inline-block;
+	position: relative;
+	margin-left: 30px;
+	background : none;
+	font-size: 2vh;
+    border-radius: 1vh;
+    height: 6vh;
+    width: 10vh;
+ }
+
+#ouvrirAncien
+{
+	position: relative;
+	margin-right:20px;
+}
+
+#ouvrirNouveau
+{
+	position: relative;
+	margin-right: 40px;
+	
+}
+
+#listeAncien
+{
+	position: relative;
+	margin-left: 50px;
+}
+
+#listeNouveau
+{
+	position: relative;
+	margin-left: 30px;
+}
+
+
+
+/**/
+/**/
+/**/
+/**/
+/* EN DESSOUS LA PAGE 4 */
+/**/
+/**/
+/**/
+/**/
+
+
+
+
+#fourthStep
+{
+    
+    display: none;
+    margin: 2% auto 2% 4%;
+    padding: 2%;
+    height: auto;
+    width: 70vh;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 16px grey;
+    border-radius: 5px;
+    position: relative;
+    margin: 1% auto 1% auto;
+    text-align: center;
+
+
+}
+
+
+#envoyer, #ecrireMessage, #joindre, #retourButton
+ {
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    background : none;
+    font-size: 2vh;
+    border-radius: 1vh;
+    height: 6vh;
+    width: 10vh;
+ }
+
+ #ecrireMessage
+ {
+    height: 20vh;
+    width: 60vh;
+ }
+
+ #envoyer
+ {
+    position: relative;
+    margin-left: 320px;
+    width: 15vh;
+ }
+
+ #aligner
+ {
+    text-align: center;
+ }
+
+#elementDossier
+{
+    float: left;
+  
+
+
+     
+ }
+
+#cartes
+{
+    float: right;
+}
+   
+    
+
+
+
+
+
+#afficherNom
+{
+    text-align: left;
+}
+
+
+#joindre
+{
+   width: 15vh;
+   position: relative;
+   bottom: 40px;
+   right:50px;
+  
+
+
+}
+
+#retour
+{
+    position: relative;
+    
+
+}
+
+
+#lienCarte
+{
+    position: relative;
+    max-width: 250px;
+    max-height: 300px;
+   
+}
+
+
+#overlay {
+    display : none; /* Par défaut, on cache l'overlay */
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    text-align: center; /* Pour centrer l'image que l'overlay contiendra */
+
+    /* Ci-dessous, nous appliquons un background de couleur noire et d'opacité 0.6. Il s'agit d'une propriété CSS3. */
+    background-color: rgba(0,0,0,0.6);
+}
+
+#overlay img {
+    margin-top: 100px;
+}
+
+#nouveauLien
+{
+            
+    float: right;
+  
+
+}
+
+
+
+
+
+
+/**/
+/**/
+/**/
+/*EN DESSOUS LA PAGE 5*/
+/**/
+/**/
+/**/
+/**/
+
+#fifthStep
+{
+    
+    display: none;
+   
+}
+
+#sendMail
+{
+    float: right;
+    
+}
+
+#retour
+{
+    float: left;
+}
+
+#message, #subject, #destination, #adresseMail
+{
+    display: inline-block;
+    
+    background : none;
+    font-size: 2vh;
+    border-radius: 1vh;
+    height: 6vh;
+    min-width: 30vh;
+}
+
+
+
+
+
+#message
+{
+    width: 50vh;
+    height: 30vh;
+}

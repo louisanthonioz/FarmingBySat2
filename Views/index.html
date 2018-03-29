@@ -1,7 +1,7 @@
-<!--    Ce fichier est le visuel visiteur du serveur, il contient les formulaires
-        destinés à l'agriculteur. Les informations sont récoltés par le script formular.js
+<!--    Ce fichier est le visuel visiteur du serveur, il contient les formulairesLes informations sont récoltés par le script formular.js
         et stockés dans une base de données
-        La mise en forme du formulaire est effectuée dans le fichier formulaire.css  -->
+        La mise en forme du formulaire est
+        destinés à l'agriculteur.  effectuée dans le fichier formulaire.css  -->
 <head>
     <!-- Penser à placer le nom de la startup dans le title -->
     <title>Mon copain le satellite</title>
@@ -9,10 +9,12 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
     <link rel="stylesheet" type="text/css" href="css/general.css"/>
-    <link rel="stylesheet" type="text/css" href="css/formulaire.css"/>
+    <link rel="stylesheet" type="text/css" href="css/page_3_4_5.css"/>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/connect.js"></script>
+    <script src="js/page_3_4_5.js"></script>
+    
     
 </head>
 <body>
@@ -22,9 +24,190 @@
         <h1>Les couverts végétaux</h1>
     </header>
     
-    <!-- Première image à droite, qui explique le fonctionnement de la startup -->
-    <img id="explainImages" class="imgExplications" src="images/explications.jpg"/>
-
    
+   
+
+
+<!--en dessous la page 3 dédier à avoir un aperçu de tout les clients -->
+<div id="thirdStep">
+<h2>LISTE DES CLIENTS</h2>
+</br>
+  
+  <table>
+    <thead id="recherche">
+       
+       <tr>
+            <th> Rechercher <input type="text" placeholder="nouveau client" id="nouveauClient"/>
+        
+                <input type="button" value="ok" onclick="rechercheNouveau();elementDossierNouveau();lesCartesNouveau();"
+                 id="nouveauClientButton"/>
+            
+            </th>
+
+                <th> Rechercher <input type="text" placeholder="client traité" id="clientTraite"/>
+       
+                <input type="button" value="ok" onclick="rechercheAncien();elementDossierAncien();lesCartesAncien();"   
+                id="ClientTraiteButton"/>
+            </th>
+    
+        </tr>
+    </thead>
+
+
+
+</table>
+<br/>
+<br/>
+
+
+<table>
+    <thead>
+       
+       <tr>
+            <th><div id="ouvrirNouveau">Nouveau Client
+            </div>
+            </th>
+
+            <th><div id="ouvrirAncien">Client Traité 
+            </div></th>
+        </tr>
+    </thead>
+
+    <tbody id="ouvrir">
+
+        <tr>
+            <td><div id="listeNouveau">Liste des nouveaux clients<br/><input type="button" value="ouvrir" onclick="ouvrirNouveau()" id="ouvrirNouveauButton"/>
+           </div></td>
+
+        <td><div id="listeAncien">Liste des clients traités<br/><input type="button" value="ouvrir" onclick="ouvrirAncien()" id="ouvrirAncienButton"/>
+        </div>
+
+        </td>
+    </tr>
+
+
+    </tbody>
+
+
+
+</table>
+
+
+<!--en dessous: ouvrir la liste des dossiers clients-->
+
+
+</div>
+
+
+
+<!-- en dessous 4e page-->
+<div id=fourthStep>
+
+<h2>LE CLIENT</h2>
+<br/><br/>
+
+<div id="AfficherNom">
+    
+    <p id="nomPrenom"></p>
+
+
+</div><br/><br/>
+
+<p id="aligner">
+
+<div id="elementDossier">
+    les éléments du dossier<br/>
+    </div>
+
+<div id="cartes">
+    <a></a>la carte<br/>
+    <div id="carte2"></div><br/>
+   
+
+
+</div>
+<div id="overlay"></div>
+</p>
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+<div id="fifthStep">
+
+
+      <div class="form-group" id="divMain">
+
+            <h2>Formulaire d'envoie de mail</h2>
+            <br>
+            <form class="form-vertical" role="form" method="post" action="/email">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="email" id="adresseMail" name="sender" id="sender" class="form-control" placeholder="Votre adresse mail"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="email" name="destination" id="destination" class="form-control" placeholder="Adresse mail du destinataire"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="L'objet du mail"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10">
+
+                     <textarea rows="11" name="message" id="message" class="form-control" placeholder="Le contenu de votre mail"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" id="envoyerButton">Envoyer</button>
+                        <button type="submit" classe="btn bnt-secondary" id="joindreButton">Joindre</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<div id="retour">
+    <input type="button" value="retour" onclick="retour()" id = "retourButton"/>à la liste des clients
+    </div>
+
+    
+
+<div id="sendMail">
+     <input type="button" value="Envoyer" onclick="envoyerMail()" id = "envoyerButton"/>un mail
+
+
+
+
+
+
+    </div>
+
+
+<br/><br/>
+
+</div>
+
+
+
+
 
 </body>
