@@ -344,7 +344,7 @@ option[value=""][disabled] {
     float: left;
 }
 
-#message, #subject, #destination, #adresseMail
+#message, #subject, #destination, #adresseMail, #motDePasse
 {
     display: inline-block;
     

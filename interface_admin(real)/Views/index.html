@@ -1,6 +1,5 @@
-<!--    Ce fichier est le visuel visiteur du serveur, il contient les formulaires
-        destinés à l'agriculteur. Les informations sont récoltés par le script formular.js
-        et stockés dans une base de données
+<!--    Ce fichier est le visuel du serveur, il contient les informations nécéssaire à l'admi por traiter la demande du client. Les informations sont récoltés par le script formular.js
+        et stockés dans une base de données pas encore mise en place
         La mise en forme du formulaire est effectuée dans le fichier formulaire.css  -->
 <head>
     <!-- Penser à placer le nom de la startup dans le title -->
@@ -28,6 +27,8 @@
    
 
 </body>
+
+<!-- la première étape permet à l'administrateur de rentrer le mot de passe et de passer à la page suivante -->
 
 <div id="firstStep">
 <div class="connect_box"> <!--écran d'entrée du mot de passe (firstep)-->
@@ -58,19 +59,23 @@
 	</div>
 </div>
 
+<!--la troisième page permet de selectionner un client, lorsque celui ci est sélectionner l'admi appui sur ok et plusieurs fonction vont se lancer, on arrive ensuite sur la quatrième page -->
+
 <div id="thirdStep">
 <h2>LISTE DES CLIENTS</h2>
 </br>
   
   <table>
     <thead id="recherche">
-       
-       <tr>
+       <!--ici il y a une différence entre client nouveau et client traité -->
+       <tr> 
             <th> Rechercher <input type="text" placeholder="nouveau client" id="nouveauClient"/>
         
-                <input type="button" value="ok" onclick="rechercheNouveau();elementDossierNouveau();lesCartesNouveau();"
+                <input type="button" value="ok" onclick="rechercheNouveau(); elementDossierNouveau();lesCartesNouveau();"
                  id="nouveauClientButton"/>
-            
+
+            <!-- les trois fonction vont se lancer lorsque l'admi appuie sur le boutton ok, c'est le formular.js qui va exécuter les fonctions-->
+
             </th>
 
                 <th> Rechercher <input type="text" placeholder="client traité" id="clientTraite"/>
@@ -91,7 +96,8 @@
 
 <table>
     <thead>
-       
+
+     <!-- on insère un tableau; à gauche nouveau client à droite ancien client. -->
        <tr>
             <th><div id="ouvrirNouveau">Nouveau Client
             </div>
@@ -101,6 +107,8 @@
             </div></th>
         </tr>
     </thead>
+
+  <!--ensuite on insère les deux block en dessous pour ouvrir la liste des nouveaux clients ou la liste des anciens clients, ceci n'a pas encore été réalisé pour l'instant il n'y a que le visuel html et css-->
 
     <tbody id="ouvrir">
 
@@ -122,18 +130,25 @@
 </table>
 
 
-<!--en dessous: ouvrir la liste des dossiers clients-->
-
+<!--ici il faut ouvrir la liste des dossiers clients-->
 
 </div>
 
 
 
+
+
+
 <!-- en dessous 4e page-->
+
 <div id=fourthStep>
 
 <h2>LE CLIENT</h2>
 <br/><br/>
+
+<!-- en haut à gauche de la page on affiche le nom et le prenom du client sélectionner
+le java script va se charger d'aller récupérer le bon client-->
+
 
 <div id="AfficherNom">
     
@@ -141,6 +156,8 @@
 
 
 </div><br/><br/>
+
+<!--id: aligner permet de mettre sur la même ligne les éléments du dossier et la carte -->
 
 <p id="aligner">
 
@@ -155,6 +172,8 @@
 
 
 </div>
+
+<!--id: overlay est utiliser pour afficher la carte en grand, le javascript gère cela -->
 <div id="overlay"></div>
 </p>
 
@@ -163,22 +182,39 @@
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
+
+
+<!-- la cinquième étapes-->
+
 <div id="fifthStep">
+
+    <!-- le formulaire pour envoyer le mail, avec à insérer adresse de l'admin, adresse du client son mot de passe le texte que l'admi veut envoyer, il peut joindre un fichier en appuyant sur le boutton 'joindre'
+        pour l'instant ce n'est pas encore fait
+        et enfin il envoie le message en ppuyant sur 'envoyer'-->
 
 
       <div class="form-group" id="divMain">
 
             <h2>Formulaire d'envoie de mail</h2>
             <br>
+
+            <!-- method= form action= "/email" permet d'envoyer les données à node.js grace à la fonction bodyparser
+            tous les élément à l'intérieur de form peuvent être récupérer du coté node.js -->
+
             <form class="form-vertical" role="form" method="post" action="/email">
                 <div class="form-group">
                     <div class="col-sm-10">
                         <input type="email" id="adresseMail" name="sender" id="sender" class="form-control" placeholder="Votre adresse mail"/>
                     </div>
                 </div>
+                 <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="password" name="motDePasse" id="motDePasse" class="form-control" placeholder="Votre mot de passe"/>
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="col-sm-10">
-                        <input type="email" name="destination" id="destination" class="form-control" placeholder="Adresse mail du destinataire"/>
+                        <input type="emaill" name="destination" id="destination" class="form-control" placeholder="Adresse mail du destinataire"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -211,7 +247,9 @@
 </div>
 
 
-
+<!--on revient sur la quatrième page
+boutton retour pour revenir sur la troisième page si l'admi s'est trompé de client
+boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du formulaire d'envoie de mail -->
 
 
 <div id="retour">
