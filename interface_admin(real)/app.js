@@ -2,10 +2,9 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
+var path = require('path');
 var express = require('express');
 var formidable = require('formidable');
-var nodeMailer = require('nodemailer');
-var bodyParser = require('body-parser');
 var app = express();
 
 
@@ -34,64 +33,6 @@ io.sockets.on('connection', function (socket) {
     console.log("Un client s'est connecté");
 
 });
-
-/* fonction qui permet d'envoyer le mail lorsque l'admin click
-sur 'envoyer'*/
-/*bodyParser nous sert à récupérer les informations de la page html grace à 
-la fonction function(req, res, next)*/
-
-/*pour l'instant il faut désactiver son antivirus pour que ça marche*/
-
-  app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
-app.post('/email', function(req, res, next) {
-
-
-	/* il faut une adresse gmail, l'addresse et le mot de passe récupéré
-  sur la page html*/
-
-	 var transporter = nodeMailer.createTransport({
-          host: 'smtp.gmail.com',
-          auth: {
-              user: req.body.sender,
-              pass: req.body.motDePasse,
-          }
-      });
-
-   /* On récupère l'addresse de l'admi et l'addresse du client+ le message 
-   écrit sur la page html*/
-
-
-      var mailOptions = {
-          from: req.body.sender, // sender address
-          to: req.body.destination, // list of receivers
-          subject: req.body.subject, // Subject line
-          text: req.body.message, // plain text body
-          html: '<b>'+ req.body.message +'</b>', // html body
-         /* la fonction attachments permet de joindre un fichier*/
-          attachments: [
-          {
-            filePath: req.body.joindre
-          },
-          ]
-      };
-
-      /* c'est la fonction qui permet d'envoyer le mail
-      on rajoute un console.log dans le cas si ça marche avec un message confirmant l'envoie 
-      ou un message d'errrut si ça ne marche pas*/
-      
-      transporter.sendMail(mailOptions, (error, info)=> {
-          if (error) {
-              return console.log(error);
-          }
-          console.log('Message %s sent: %s', info.messageId, info.response);
-              res.render('index');
-          });
-      });
-
-
-
 
 
 
