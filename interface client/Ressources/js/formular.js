@@ -192,6 +192,7 @@ function goFourthStep(){
   typeOfSol.push(document.getElementById('zoneVulnerableIn').checked);
   typeOfSol.push(document.getElementById('zoneProtegeeIn').checked);
   typeOfSol.push(document.getElementById('natura2000In').checked);
+  typeOfSol.push(document.getElementById('zoneAutre').checked);
 
   console.log(pacDone);
   console.log(nbh2);
@@ -204,6 +205,7 @@ function goFourthStep(){
     if(isNaN(nbh2) == false){
       if(isNaN(nbparcelles) == false){
         document.getElementById('thirdStep').style.display = 'none';
+         document.getElementById('fourthStep').style.display = 'block';      
         proceedFourthStep();
       }else{
         alert("Vous n'avez pas renseigné votre nombre de parcelles!");

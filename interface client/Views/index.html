@@ -72,16 +72,32 @@
     <div id="thirdStep">
       <h2>INFORMATIONS GENERALES SUR VOS PARCELLES</h2>
     </br>
+
+    <div id="parcellaire">
+
+      <h3>Parcellaire</h3>
       <p>
         <input type="text" placeholder="Nombre d'hectares total" id="nbH2" />
       </p>
       <p>
         <input type="text" placeholder="Nombre de parcelles pour couverts" id="nbParc" />
       </p>
+    </div>
 
 
 
-        <div id="checkboxesZones">
+     
+        <div id="declarationPAC1">
+          <h3>Souscrites</h3>
+          Déclaration PAC <input id="pac" type="file" name="uploads[]">
+        </p>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        </div>
+
+
+
+            <div id="checkboxesZones">
+              <h3>Situation de vos parcelles</h3>
           <p>
             <input id="zoneVulnerableIn" type="checkbox"/>
             <label for="zoneVulnerableIn">Zones Vulnérables</label>
@@ -94,12 +110,16 @@
               <input id="natura2000In" type="checkbox"/>
               <label for="natura2000In">Natura 2000</label>
           </p>
+
+          <p>
+              <input id="zoneAutre" type="checkbox"/>
+              <label for="zoneAutre">Autre</label>
+          </p>
         </div>
-        <p id="declarationPAC">
-          Déclaration PAC: <input id="pac" type="file" name="uploads[]">
-        </p>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <p>
+        
+
+
+
           <input type="button" value="Suivant" onclick="goFourthStep()" id="validateur"/>
         </p>
     </div>
@@ -112,8 +132,20 @@
     <div id="fourthStep">
       <h2 id="emptyTitleParc"></h2>
       <p id="titreEtape4">Informations sur vos cultures</p>
-      <p>
-        <label>Votre culture précédente :</label>
+    <br/><br/>
+        <!---->
+        <!---->
+        <!---->
+        <!-- premiere partie: rotation-->
+        <!---->
+        <!---->
+        <!---->
+
+        <div id="rotation">
+
+          <h3 id="rotationTitre">Rotation</h3><br/><br/>
+
+           <div id="votreCulturePrecedente">Votre culture précédente </div>
         <select id="precRot">
           <option value="" id="choix"  disabled selected>Sélectionnez ici</option>
           <option value="Blé assolé">Blé assolé</option>
@@ -133,9 +165,9 @@
           <option value="Tabac (Burley)">Tabac (Burley)</option>
           <option value="Autre">Autre</option>
         </select>
-      </p>
-      <p>
-        <label>Votre culture suivante :</label>
+   
+   
+        <div id="votreCultureSuivante">Votre culture suivante </div>
         <select id="nextRot">
           <option value="" id="choix"  disabled selected>Sélectionnez ici</option>
           <option value="Blé assolé">Blé assolé</option>
@@ -155,45 +187,83 @@
           <option value="Tabac (Burley)">Tabac (Burley)</option>
           <option value="Autre">Autre</option>
         </select>
-      </p>
-		<p id="declarationPAC">
-		Plan de fumure * <input  id= "fumure" type="file" name="uploads[]" >
-		</p>
-      <p id="declarationPAC">
-        Cartographie de Fertilisation Farmstar * <input id="fertFarmStar" type="file" name="uploads[]">
-      </p>
-      <p id="declarationPAC">
-        Analyses de Sol * <input id="anaSol" type="file" name="uploads[]" >
-      </p>
-      <p id="declarationPAC">
-        Reliquats sortie d'hiver * <input id="bilan" type="file" name="uploads[]" multiple>
-      </p>
-
-      <input type="text" id="rdt" placeholder="Renseignez vos rendements par h2 pour cette parcelle:">
-      <p id="declarationPAC">
-        Cartographie de rendement *<input id="cartoRdt" type="file" name="uploads[]"/>
-		</p>
-
-
-
-      <!--  Grand champ de texte -->
-     <p id = "declarationPAC">Avantages et inconvénients de la parcelle?<input type="text" id="advdis" placeholder=" avantages et inconvénients"/></p>
-
-
 
 
   <!--en dessous: les informations à ajouter concernant Quelle est sa date prévisionnelle de récolte de la culture précédente-->
+<br/><br/>
 
-
-
-
-
-        <p id="declarationPAC"> Date récolte précédente <input id="daterecolte" type="text" placeholder="date"  />
+          <p id="dateRecolteText"> Date récolte précédente <br/><input id="daterecolte" type="text" placeholder="jour/mois/année"  />
         </p>
 
+        </div><br/><br/><br/><br/> 
+
+
+            <!---->
+          <!---->
+          <!--troisième partie: rendement-->
+          <!---->     
+          <!---->  
+
+       <div id="rendement">
+        <h3 id="rendementTitre">Rendement</h3><br/><br/>
+
+        <input type="text" id="rdt" placeholder=" votre rendement(Q/hectares)"><br/><br/><br/>
+
+      <p id="declarationPAC">
+        Cartographie de rendement *<input id="cartoRdt" type="file" name="uploads[]"/>
+    </p>
+
+       </div><br/><br/><br/><br/>
+     
+
+
+          <!---->
+          <!---->
+          <!--deuxième partie: fertilisation-->
+          <!---->
+          <!---->
+       
+
+       <div id="Fertilisation">
+        <h3 id="fertilisationTitre">Fertilisation</h3><br/><br/>
+
+    <div id="planDeFumure">
+    Plan de fumure <br/><input  id= "fumure" type="file" name="uploads[]" >
+    </div><br/>
+
+     <div id="cartographieDeFertilisation">
+        Cartographie de Fertilisation <br/><input id="fertFarmStar" type="file" name="uploads[]">
+      </div><br/>
+
+      <div id="AnalyseDeSol">
+        Analyses de Sol <br/><input id="anaSol" type="file" name="uploads[]" >
+      </div><br/>
+
+        <div id="ReliquatsSortieDhiver">
+        Reliquats sortie d'hiver * <br/><input id="bilan" type="file" name="uploads[]" multiple>
+      </div>
+
+
+       </div><br/><br/>
+
+      
+
+          <!---->
+          <!---->
+          <!--quatrième partie: couvert végétaux-->
+          <!---->
+          <!---->
+      
+
+        
 <!--6. Son type de semoirs pour les couverts végétaux avec un menu déroulant cf.p.73. (Semoirs à céréales, semoirs à la volée, semoirs de semis direct, etc.)-->
         
-    <p id="declarationPAC">
+   
+
+      <div id="couvertVegetaux">
+        <h3 id= couverVegetauxTitre>Couvert Végétal</h3><br/><br/>
+
+         <div id="declarationPAC">
     <tr>
       <td>Type de semoirs pour les couverts végétaux</td>
       <td>
@@ -208,11 +278,11 @@
       </td>
     
     </tr><br/>
-    <p>
+    </div>
 
 <!--7. Mode de destruction du couvert cf.p.62. (Chimique, broyage, labour, gel, déchaumage)-->
 
-    <p id="declarationPAC">
+    <div id="declarationPAC">
      <tr>
       <td>Mode de destruction du couvert</td>
       <td>
@@ -227,83 +297,87 @@
       </td>
     
     </tr><br/>
-  </p>
+  </div>
+
+      <!--8. Les problématiques de la parcelle (adventices, maladies, ravageurs, compaction), l’agriculteur peut sélectionner plusieurs choix et pour chacun un autre menu déroulant s’affiche avec le nom des maladies ou des rageurs à sélectionner par exemple.-->
 
 
-
-<!--8. Les problématiques de la parcelle (adventices, maladies, ravageurs, compaction), l’agriculteur peut sélectionner plusieurs choix et pour chacun un autre menu déroulant s’affiche avec le nom des maladies ou des rageurs à sélectionner par exemple.-->
-
-
-    <p id="declarationPAC"> Problèmes de la parcelle : </p>
+  
     
      <div id="checkboxesZones">
+      Problèmes de la parcelle 
 
 
-         <p>
+         <div>
         <input id="compactionProbleme" type="checkbox" onclick="myFunction()">
               <label for="compactionProbleme">Compactions</label>
                  <label><input id="compactions" type="text" placeholder="renseignez les compactions" style="display:none"></label>
-        </p>
+        </div>
         
-        <p>  <input id="adventicesProbleme" type="checkbox" onclick="myFunction()">
+        <div>  <input id="adventicesProbleme" type="checkbox" onclick="myFunction()">
             <label for="adventicesProbleme">Adventices</label> 
              <label><input id="adventices" type="text" placeholder="renseignez les adventices" style="display:none"></label>
              
-          </p>
+          </div>
           
-            <p>  <input id="maladiesProbleme" type="checkbox" onclick="myFunction()">
+            <div>  <input id="maladiesProbleme" type="checkbox" onclick="myFunction()">
               <label for="maladiesProbleme">Maladies</label>
               <label><input id="maladies" type="text" placeholder="renseignez les maladies" style="display:none"></label>
           
-          </p>
-          <p>    <input id="ravageursProbleme" type="checkbox" onclick="myFunction()">
+          </div>
+
+          <div>    <input id="ravageursProbleme" type="checkbox" onclick="myFunction()">
               <label for="ravageursProbleme">Ravageurs</label>
                <label><input id="ravageurs" type="text" placeholder="renseignez les ravageurs" style="display:none"></label> 
           
-      </p>
+      </div>
           
        
         </div>
 
-
+      </div><br/><br/>
     
-
-    
-  
-   
-    
- 
-
-  
+     
+         <!---->
+         <!---->
+         <!--cinquième partie: autres remarques-->
+         <!---->
+         <!---->
 
 
-  
+      <div id="autreRemarque">
+        <h3 id="autreRemarqueTitre">Autres remarques</h3><br/>
 
-<!--- Autres remarques sur cette parcelle (à ajouter)-->
-
-      <p id="declarationPAC">
-          <label>Autres remarques sur cette parcelle<input id = "remParcelle" type="text" placeholder ="autres remarques"/></label>
-      </p>
-
-
+         <div id="declarationPAC">
+          <label><input id = "remParcelle" type="text" placeholder ="remarques"/></label>
+     
+      </div>
 
 
+      </div><br/><br/>
 
 
-
-
-
-
+      <!---->
+      <!---->
+      <!--Dernière partie: boutton pour finir le questionnaire-->       
+      <!---->
+      <!---->
 
       <input type="button" id="NextParc" onclick="nextInFourthStep()" value="Parcelle suivante!" />
       <input type="button" id="finalizeForm" value="Finir!" onclick="nextInFourthStep()"/>
-      <p id="noteBasPage">* Ce champ n'est pas obligatoire</p>
-    </div>
+      <div id="noteBasPage">* Ce champ n'est pas obligatoire</div>
+  </div>
+     <!---->
+     <!---->
+     <!--derniere étape-->
+     <!---->
+     <!---->
+     <!---->
 
     <!-- Message de fin, indiquant que l'agriculteur recevra via e-mail son conseil sur couvert végétal -->
-    <div id="FinalStep">
-      <p>
+    <p id="FinalStep">
+    
         Merci beaucoup d'avoir rempli ce formulaire, vous recevrez un mail lors de la réception de vos informations!
-      </p>
-    </div>
+    </p>
+
 </body>
