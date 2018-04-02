@@ -119,7 +119,8 @@ option[value=""][disabled] {
 
 }
 
-#nouveauClient, #nouveauClientButton, #clientTraite, #clientTraiteButton, #envoyerButton, #envoyerButton, #joindreButton 
+#nouveauClient, #nouveauClientButton, #clientTraite, 
+#clientTraiteButton, #envoyerButton, #joindreButton, #joindre
 {
 	display: inline-block;
 	
@@ -203,7 +204,7 @@ option[value=""][disabled] {
 }
 
 
-#envoyer, #ecrireMessage, #joindre, #retourButton
+#envoyer, #ecrireMessage, #retourButton
  {
     display: inline-block;
     position: relative;
@@ -259,16 +260,7 @@ option[value=""][disabled] {
 }
 
 
-#joindre
-{
-   width: 15vh;
-   position: relative;
-   bottom: 40px;
-   right:50px;
-  
 
-
-}
 
 #retour
 {
@@ -330,6 +322,16 @@ option[value=""][disabled] {
 {
     
     display: none;
+    margin: 2% auto 2% 4%;
+    padding: 2%;
+    height: auto;
+    width: 70vh;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 16px grey;
+    border-radius: 5px;
+    position: relative;
+    margin: 1% auto 1% auto;
+    text-align: center;
    
 }
 
@@ -344,6 +346,10 @@ option[value=""][disabled] {
     float: left;
 }
 
+#retour2
+{
+    text-align: left;
+}
 #message, #subject, #destination, #adresseMail, #motDePasse
 {
     display: inline-block;
@@ -365,7 +371,16 @@ option[value=""][disabled] {
     height: 30vh;
 }
 
+#joindre
+{
+    display: none;
+}
 
+#joindreButton
+{
+    margin-left: -40vh;
+    margin-top: -8vh;
+}
 
 
 

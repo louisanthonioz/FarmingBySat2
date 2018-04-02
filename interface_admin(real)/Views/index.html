@@ -150,12 +150,7 @@
 le java script va se charger d'aller récupérer le bon client-->
 
 
-<div id="AfficherNom">
-    
-    <p id="nomPrenom"></p>
-
-
-</div><br/><br/>
+<div id="AfficherNom"></div><br/><br/>
 
 <!--id: aligner permet de mettre sur la même ligne les éléments du dossier et la carte -->
 
@@ -165,26 +160,47 @@ le java script va se charger d'aller récupérer le bon client-->
     les éléments du dossier<br/>
     </div>
 
-<div id="cartes">
-    <a></a>la carte<br/>
-    <div id="carte2"></div><br/>
-   
+<div id="cartes"><a></a>la carte<br/><div id="carte2"></div><br/></div><!--id: overlay est utiliser pour afficher la carte en grand, le javascript gère cela -->
+<div id="overlay"></div>
+</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+
+<!--on revient sur la quatrième page
+boutton retour pour revenir sur la troisième page si l'admi s'est trompé de client
+boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du formulaire d'envoie de mail -->
+
+
+<div id="retour">
+    <input type="button" value="retour" 
+    onclick="retour();element4();" 
+    id = "retourButton"/>à la liste des clients
+    </div>
+
+    
+
+<div id="sendMail">
+     <input type="button" value="Envoyer" onclick="envoyerMail()" id = "envoyerButton"/>un mail
+
+
+
+
+
+
+    </div>
+
+
+<br/><br/>
 
 </div>
 
-<!--id: overlay est utiliser pour afficher la carte en grand, le javascript gère cela -->
-<div id="overlay"></div>
-</p>
 
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-
+<!---->
+<!---->
 <!-- la cinquième étapes-->
+<!---->
+<!---->
+<!---->
+
 
 <div id="fifthStep">
 
@@ -233,45 +249,30 @@ le java script va se charger d'aller récupérer le bon client-->
                 <div class="form-group">
                     <div class="col-sm-10">
                         <button type="submit" class="btn btn-primary" id="envoyerButton">Envoyer</button>
-                        <button type="submit" classe="btn bnt-secondary" id="joindreButton">Joindre</button>
+
+                      
                     </div>
                 </div>
+                  
+
             </form>
+              <button type="submit" id="joindreButton" onclick="choisirFichier()">Joindre</button>
+                <input type="file" id="joindre"  name="uploads[]" onclick= "telechargerFichier()" >   
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
         </div>
 
 
+<!--bouton retour pour revenir à la page précédente-->
 
 
 
+<div id="retour2">
+    <input type="button" value="retour" id="retourButton" onclick="retour2();element5();" >
+    Voir client
+</div>
 
 </div>
 
-
-<!--on revient sur la quatrième page
-boutton retour pour revenir sur la troisième page si l'admi s'est trompé de client
-boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du formulaire d'envoie de mail -->
-
-
-<div id="retour">
-    <input type="button" value="retour" onclick="retour()" id = "retourButton"/>à la liste des clients
-    </div>
-
-    
-
-<div id="sendMail">
-     <input type="button" value="Envoyer" onclick="envoyerMail()" id = "envoyerButton"/>un mail
-
-
-
-
-
-
-    </div>
-
-
-<br/><br/>
-
-</div>
 
 
 

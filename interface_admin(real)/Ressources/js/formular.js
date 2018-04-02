@@ -1,5 +1,8 @@
 
 
+
+
+
 /*on récupère le mot de passe écrit par l'admi 
 grace à document.getElementById*/
 
@@ -44,12 +47,16 @@ function rechercheNouveau(){
 	document.getElementById('thirdStep').style.display= "none";
 	
 	
+	var nomPrenom = document.createElement('p');
+	nomPrenom.id= 'nomPrenom';
 
-	var nouveauNom = document.createTextNode(nouveauClient);
-	document.getElementById('nomPrenom').appendChild(nouveauNom);
+
+	var nom= document.getElementById('AfficherNom');
+	nom.appendChild(nomPrenom);
+
+	var nomText= document.createTextNode(nouveauClient);
+	nomPrenom.appendChild(nomText);
 	
-
-
 	
 	
 
@@ -78,12 +85,14 @@ function rechercheAncien(){
 	document.getElementById('fourthStep').style.display = "block";
 	document.getElementById('thirdStep').style.display= "none";
 
+	var nomPrenom = document.createElement('p');
+	nomPrenom.id='nomPrenom';
 	
-
-	var nom = document.getElementById('nomPrenom');
+	var nom = document.getElementById('AfficherNom');
+	nom.appendChild(nomPrenom);
 
 	var nomText= document.createTextNode(clientTraite);
-	nom.appendChild(nomText);
+	nomPrenom.appendChild(nomText);
 
 	}else { 
 		alert("vous devez entrer le nom et le prénom d'un client");
@@ -93,22 +102,87 @@ function rechercheAncien(){
 }
 
 
+/**/
+/**/
+/*on appelle la fonction qui supprime les données de la page 4
+On utilise la fonction removeChild qui va supprimer l'élément enfant
+d'un élément parent sélectionné.
+leséléments enfants sont ceux que l'on crée dans le javascript*/
+/**/
+/**/	
+function element4(){
+		
+		var dossier= document.getElementById('lienDossier');
+		var parentDossier = document.getElementById('elementDossier');
+		parentDossier.removeChild(dossier);
+		
 
-/*permet de revenir sur la 3e page
+		var nom= document.getElementById('nomPrenom');
+		var parentNom = document.getElementById('AfficherNom');
+		parentNom.removeChild(nom);
+
+	
+		var carte= document.getElementById('nouveauLien');
+		var parentCarte = document.getElementById('cartes');
+		parentCarte.removeChild(carte);	
+
+		var carte2= document.getElementById('lienCarte');
+		var parentCarte2 = document.getElementById('carte2');
+		parentCarte2.removeChild(carte2);		
+		
+		
+		alert('Les éléments de la page ont été supprimé');
+	
+
+	}
+
+	/*permet de revenir sur la 3e page
  supprime tout les éléments effectuer sur la 4e page(pas encore fait)
  la fonction se décleche en appuyant sur le boutton retour du html*/
+	
 
 function retour(){
 	document.getElementById('fourthStep').style.display = "none";
 	document.getElementById('thirdStep').style.display= "block";
-    document.getElementById('nouveauClient').value= null; 
-	
-	
+
 
 }
 
 
 
+
+/*function retour2 permet de revenir à la page4: 
+la page client lorsqu'on est à la page5: 
+la pag pour envoyer un mail au client*/
+
+function retour2(){
+	document.getElementById('fifthStep').style.display = "none";
+	document.getElementById('fourthStep').style.display= "block";
+    document.getElementById('sendMail').style.display="block";
+	
+
+  
+		
+
+
+
+	/*on appelle la fonction qui supprime les fichiers joint 
+	et la fonction qui supprime les élémens de la page5*/
+	supprimerDonnees();
+
+}
+
+	function element5(){
+
+  /*fonction pour suppprimer les éléments de la page 5:
+ le texte, les adresses...*/
+
+	
+		alert('les éléments de la page ont été supprimé');
+
+	}
+
+	
 
 /*toujours lors du click sur le bouton ok de la 3e page, 
 la fonction affiche un lien avec le document correspondant au client en question
@@ -288,5 +362,69 @@ en appuyant sur envoyermail on déclenche la fonction
 function envoyerMail(){
 	document.getElementById('fifthStep').style.display = "block";
 	document.getElementById('sendMail').style.display="none";
+	document.getElementById('fourthStep').style.display="none";
 }
         
+/* fonction qui permet de joindre un fichier en faisant 
+apparaitre le block joindre un fichier */
+
+function choisirFichier(){
+	var joindre= document.getElementById('joindre');
+joindre.style.display= "block";
+
+}
+
+/* fonction pour permet de télécharger le ficher choisi par 
+l'admi et de le placer dans le dossier'farmingData*/
+
+function telechargerFichier(){
+
+	var pacDone = false;
+	var pacFile;
+
+	 $('#joindre').on('change', function(){
+    var files = $(this).get(0).files;
+    if (files.length > 0){
+      // create a FormData object which will be sent as the data payload in the
+      // AJAX request
+       pacFile = files[0].name;
+      var formData = new FormData();
+
+
+
+	 for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+
+        // add the files to formData object for the data payload
+        formData.append('uploads[]', file, file.name);
+      }
+
+     
+
+      $.ajax({
+        url: '/upload',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(data){
+        },
+        xhr: function() {
+          // create an XMLHttpRequest
+          var xhr = new XMLHttpRequest();
+
+          // listen to the 'progress' event
+          xhr.upload.addEventListener('progress', function(evt) {
+
+            if (evt.lengthComputable) {
+              pacDone = true;
+            }
+          }, false);
+          return xhr;
+        }
+      });
+
+
+	}
+});
+	}

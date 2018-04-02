@@ -6,6 +6,8 @@ var express = require('express');
 var formidable = require('formidable');
 var nodeMailer = require('nodemailer');
 var bodyParser = require('body-parser');
+var Zip = require('adm-zip');
+const {URL} = require('url');
 var app = express();
 
 
@@ -21,7 +23,18 @@ app.get('/', function(req, res,next) {
     res.sendFile(__dirname + '/Views/index.html');
 
 });
- 
+
+
+
+
+
+/**/
+/**/
+/* connection avec le javascript*/
+ /**/
+ /**/
+
+
  var io = require('socket.io').listen(server);
 
 /* Begin of synchronous listening of server */
@@ -33,14 +46,57 @@ io.sockets.on('connection', function (socket) {
     // Alert the server
     console.log("Un client s'est connecté");
 
+
+    /*fonction pour suprimer les données de la page 5
+    si on quite cette page*/
+    socket.on('supprimer', function(message){
+
+      console.log('l\'admi a un message pour le server : '+message);
+      deleteFolder('./Ressources/farmingData/');
+      console.log('Dossier supprimé');
+
+    
+    
+
 });
 
+  });
+
+/*fonction qui suprime les fichiers placer dans farmingData*/
+
+/*  Allow server to recursively delete a folder and it content by passing it path */
+function deleteFolder(path) {
+  if( fs.existsSync(path) ) {
+    fs.readdirSync(path).forEach(function(file) {
+      var curPath = path + "/" + file;
+        if(fs.statSync(curPath).isDirectory()) { // recurse
+          deleteFolderRecursive(curPath);
+        } else { // delete file
+          fs.unlinkSync(curPath);
+        }
+    });
+   
+  }
+   
+
+
+}
+
+
+
+
+
+/**/
+/**/
 /* fonction qui permet d'envoyer le mail lorsque l'admin click
 sur 'envoyer'*/
 /*bodyParser nous sert à récupérer les informations de la page html grace à 
 la fonction function(req, res, next)*/
 
 /*pour l'instant il faut désactiver son antivirus pour que ça marche*/
+/**/
+/**/
+
 
   app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -72,7 +128,7 @@ app.post('/email', function(req, res, next) {
          /* la fonction attachments permet de joindre un fichier*/
           attachments: [
           {
-            filePath: req.body.joindre
+            filePath: './Ressources/farmingData/Rapport de peofessionnalisation.pdf'
           },
           ]
       };
@@ -90,6 +146,51 @@ app.post('/email', function(req, res, next) {
           });
       });
 
+/*fonction pour récupérer le fichier télécharger*/
+// Event to handle uploads files
+
+app.post('/upload', function(req, res){
+
+  // create an incoming form object
+  var form = new formidable.IncomingForm();
+
+  // specify that we want to allow the user to upload multiple files in a single request
+  form.multiples = true;
+  
+  var dir = "/Ressources/farmingData/";
+
+  // store all uploads in the /uploads directory
+  form.uploadDir = path.join(__dirname, dir);
+
+  // every time a file has been uploaded successfully,
+  // rename it to it's orignal name
+  form.on('file', function(field, file) {
+    fs.rename(file.path, path.join(form.uploadDir, file.name));
+  });
+
+  // log any errors that occur
+  form.on('error', function(err) {
+    console.log('An error has occured: \n' + err);
+  });
+
+  // once all the files have been uploaded, send a response to the client
+  form.on('end', function() {
+    res.end('success');
+  });
+
+  // parse the incoming request containing the form data
+  form.parse(req);
+
+});
+
+
+/**/
+/**/
+/**/
+/*fonction qui supprime les fichiers téléchargé*/
+/**/
+/**/
+ 
 
 
 
