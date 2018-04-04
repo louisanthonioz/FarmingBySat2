@@ -6,12 +6,8 @@
 /*on récupère le mot de passe écrit par l'admi 
 grace à document.getElementById*/
 
-var mdp = document.getElementById("password").value;
 
-/* on crée une variable test qui est la valeur correcte
- du mot de passe*/
 
-var test = test;
 
 /*fonction qui test la compatibilité du mdp écrit par l'admi
 la fonction est déclenché lorsque l'admi appuie sur le boutton OK 
@@ -21,13 +17,22 @@ la fonction est déclenché lorsque l'admi appuie sur le boutton OK
 il faut dans un premier temps les afficher ou les cacher dans le css */
 
 function goSecondStep(){
-	if (mdp == test){
-		document.getElementById('thirdStep').style.display = "block";
+
+	/* on crée une variable test qui est la valeur correcte
+ du mot de passe et la variable administrateur la valeur correcte de id*/
+	var mdp = document.getElementById("password").value;
+	var id = document.getElementById("identifiant").value;
+	var test = 'test';
+	var idadmin = 'administrateur';
+	
+
+	if (mdp == test && id == idadmin ){
+		document.getElementById('secondStep').style.display = "block";
 		document.getElementById('firstStep').style.display = "none";
 		
 	}
 	else{
-		alert("mot de passe incorrect");
+		alert("mot de passe ou identifiant incorrect");
 	}	
 }
 
@@ -37,14 +42,15 @@ de plus elle fait apparaitre le nom et prénom du client
  en haut à gauche. Si l'entrez est vide la fonction renvoie 
  un message d'erreur */
 
-function rechercheNouveau(){
+function rechercheNouveau(client){
 
-	var nouveauClient = document.getElementById('nouveauClient').value;
+	var nouveauClient = document.getElementById(client).value;
 	
 	if (nouveauClient != '' ){
 	
 	document.getElementById('fourthStep').style.display = "block";
 	document.getElementById('thirdStep').style.display= "none";
+	document.getElementById('secondStep').style.display = 'none';
 	
 	
 	var nomPrenom = document.createElement('p');
@@ -143,7 +149,7 @@ function element4(){
 
 function retour(){
 	document.getElementById('fourthStep').style.display = "none";
-	document.getElementById('thirdStep').style.display= "block";
+	document.getElementById('secondStep').style.display= "block";
 
 
 }
@@ -178,7 +184,7 @@ function retour2(){
  le texte, les adresses...*/
 
 	
-		alert('les éléments de la page ont été supprimé');
+		alert('les pièces jointes ont été supprimé');
 
 	}
 
@@ -196,7 +202,7 @@ grace à la fonction appendChild on insère l'élément enfant (élément a)qu'o
   on insère se text dans l'élément <a> grace à la fonction appendChild  */
 
 
-function elementDossierNouveau(){
+function elementDossierNouveau(client){
 	var lienDossier= document.createElement('a');
 	lienDossier.id='lienDossier';
 	lienDossier.href = 'http://www.siteduzero.com';

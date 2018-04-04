@@ -34,7 +34,8 @@
 <div class="connect_box"> <!--écran d'entrée du mot de passe (firstep)-->
 
 		 <img id="explainImages" class="imgadmin3" src="images/admin3.png"/>
-         <input type="password" value="" placeholder="Enter Password" id="password">
+        <input type="text" id="identifiant" placeholder="ID">
+         <input type="password" placeholder="Enter Password" id="password">
 		 <input type="button" value = "Go!" id="bouton1" onclick="goSecondStep()"> 
 		 
 </div>
@@ -42,19 +43,22 @@
 
 
 <div id="secondStep">
+
 	<div id ="liste_deroulante"> <!--Liste des clients (secondstep)-->
 
 	  <p>
 		<h2>Séléctionnez le client</h2>
+         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient'); elementDossierNouveau();lesCartesNouveau();" id="nouveauClientButton"/><br/><br/><br/>
         <label>Liste des clients :</label>
-        <select id="Deroulo">
+        <select id="deroulo">
           <option value="" id="choix"  disabled selected>Sélectionnez ici</option>
           <option value="Jean-Pierre Bidule">Jean-Pierre Bidule</option>
           <option value="Arnaud Machin">Arnaud Machin</option>
           <option value="x">x</option>
 		  <option value="y">y</option>
 		  <option value="z">z</option>
-        </select>
+        </select><input type="button" value="ok" onclick="rechercheNouveau('deroulo'); elementDossierNouveau();lesCartesNouveau();"
+                 id="nouveauClientButton"/>
       </p>
 	</div>
 </div>

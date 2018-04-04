@@ -126,11 +126,8 @@ app.post('/email', function(req, res, next) {
           text: req.body.message, // plain text body
           html: '<b>'+ req.body.message +'</b>', // html body
          /* la fonction attachments permet de joindre un fichier*/
-          attachments: [
-          {
-            filePath: './Ressources/farmingData/Rapport de peofessionnalisation.pdf'
-          },
-          ]
+          attachments : attachments
+          
       };
 
       /* c'est la fonction qui permet d'envoyer le mail
@@ -145,8 +142,11 @@ app.post('/email', function(req, res, next) {
               res.render('index');
           });
       });
+var attachments =[{ filename: 'BilanParcelles.pdf', path: './Ressources/farmingData/BilanParcelles.pdf', contentType:'aplication/pdf' }];
+          
 
-/*fonction pour récupérer le fichier télécharger*/
+/*fonction pour récupérer le fichier télécharger
+on le met dans le fichier farmingData*/
 // Event to handle uploads files
 
 app.post('/upload', function(req, res){
@@ -187,10 +187,11 @@ app.post('/upload', function(req, res){
 /**/
 /**/
 /**/
-/*fonction qui supprime les fichiers téléchargé*/
+/*fonction qui permet de lire les fichiers joints afin de les envoyer*/
 /**/
 /**/
- 
+
+
 
 
 
