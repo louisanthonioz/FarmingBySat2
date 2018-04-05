@@ -1,0 +1,135 @@
+
+
+<html>
+
+
+<!--page données du client-->
+
+<head>
+    <!-- Penser à placer le nom de la startup dans le title -->
+    <title>Mon copain le satellite</title>
+    <meta charset="utf-8"></meta>
+    <link rel="stylesheet" type="text/css" href="general.css"/>
+    <link rel="stylesheet" type="text/css" href="infoClient.css"/>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+ 
+
+	
+    
+</head>
+<body>
+    
+    <!-- Penser à placer le nom de la startup dans le h1 -->
+    <header class="enTete">
+        <h1>Les couverts végétaux</h1> 		
+    </header>
+
+<!---->
+<!---->
+<!-- page 1: renseignement générale du client et de son champ-->
+<!---->
+<!---->
+<!---->
+
+
+<div id="renseignementClientPage1">
+
+<div id="informationsPersonnellesClient"><h2>Informations personnelles du client</h2>
+
+<div id="nomClient">Nom : 
+</div><br/>
+<div id="prenomClient">Prénom : </div><br/>
+<div id="telephoneClient">Téléphone : </div><br/>
+<div id="adresseMailClient">Adresse mail : </div><br/>
+<div id="rueClient">Rue : </div><br/>
+<div id="codePosatalClient">Code Postal : </div><br/>
+<div id="villeClient">Ville : </div>
+
+
+</div>
+
+<div id="informationsAgricolesClient">
+    <h2>Informations agricoles du client</h2>
+
+<h3>Parcelaire</h3><div id="parcelaireClient">
+
+    <div id="nombreHectareClient">Nombre d'hectares : </div><br/>
+    <div id="nombreParcelleClient">Nombre de parcelles : </div><br/>
+    <div id="situationParcelleClient">Situation de la parcelle : </div><br/>
+</div>
+
+<h3>Souscrit</h3><div id="souscritClient">
+        <div id="declarationPACClient">Déclaration PAC client : </div><br/>
+    </div>
+
+<h3>Parcelles</h3><div id="parcellesClient">
+</div><br/>
+
+<h3>Cartes</h3><div id="cartesClient">
+</div>
+
+
+</div>
+</div>
+
+
+
+<!---->
+<!---->
+<!-- deuxième page: elle concerne chaque parcelle en appuyant sur le lien de chaque parcelle l'admi peut alors disposer des informations concernant la parcelle-->
+<!---->
+<!---->
+
+
+
+
+<div id="renseignementClientPage2">
+<div id="mettreNumeroParcelle"></div>
+
+
+<h3>Rotation</h3><div id="Rotation">
+    <div id="culturPrecedente">Culture précédente : </div><br/>
+    <div id="cultureSuivante">Culture suivante : </div><br/>
+    <div id="dateRecolte">Date récolte précédente : </div><br/>
+</div>
+
+
+<h3>Fertilisation</h3>
+<div id="fertilisation">
+    <div id="planFumure">Plan de fumure : </div><br/>
+    <div id="cartographieFertilisation">Cartographie de fertilisation : </div><br/>
+    <div id="analyseSol">Analyse des sols : </div><br/>
+    <div id="reliquatsHiver">Reliquats sortie d'hiver : </div><br/>
+</div>
+
+<h3>Couvert Végétal</h3>
+
+<div id="couverVégétal">
+    <div id="typeSemoir">Type de semoir du couvert : </div><br/>
+    <div id="modeDestruction">Mode de destruction du couvert : </div><br/>
+    <div id="problemeParcelle">Problème de la parcelle : </div><br/>
+    </div>
+
+<h3>Rendement</h3>
+<div id="Rendement">
+    <div id='leRendement'>Le rendement (Q/hectares) : </div><br/>
+    <div id="cartographieRendement">Cartographie de rendement : </div><br/>
+
+</div>
+
+<h3>Remarque</h3>
+
+<div id="remarque">
+    </div>
+
+<div id="retour3">
+    <input type="button" value="retour" id="retour3" onclick="retour3()"> fiche client
+
+</div>
+   </div>
+
+
+<script src="infoClient.js"></script>
+</body>
+
+</html>
