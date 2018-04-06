@@ -384,8 +384,29 @@ option[value=""][disabled] {
 }
 
 
+#informationsPersonnellesClient, #informationsAgricolesClient
+{
+    display: inline-block;
+   
+
+  
+}
+
+#renseignementClientPage2
+{
+    display: none;
+}
+
+#retour3
+{
+        display: inline-block;
+    
+    background : none;
+    font-size: 2vh;
+    border-radius: 1vh;
+    height: 6vh;
+    min-width: 5vh;
+    text-align: center;
 
 
-
-
-
+}

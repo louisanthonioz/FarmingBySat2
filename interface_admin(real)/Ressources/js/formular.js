@@ -1,4 +1,37 @@
 
+/*variable utilié dans le javascript*/
+
+var mpd;
+var id;
+
+var test;
+var idadmin;
+var nouveauClient;
+var nomPrenom;
+var nom;
+var nomText;
+
+var nomEnfant;
+var parentNom;
+var carteEnfant;
+var parentCarte;
+var carte2Enfant;
+var parentCarte2;
+
+var nouveauLien;
+var nouveauLienText;
+var lienCarte;
+var img;
+var overlay;
+
+var joindre;
+
+var listeClient = ['a','b','c','d','e','f','g','h','i','j','k'];
+var ajouterClient;
+
+var deroulo;
+var nomClient;
+
 
 
 
@@ -20,19 +53,20 @@ function goSecondStep(){
 
 	/* on crée une variable test qui est la valeur correcte
  du mot de passe et la variable administrateur la valeur correcte de id*/
-	var mdp = document.getElementById("password").value;
-	var id = document.getElementById("identifiant").value;
-	var test = 'test';
-	var idadmin = 'administrateur';
+	 mdp = document.getElementById("password").value;
+	 id = document.getElementById("identifiant").value;
+	 test = 'test';
+	 idadmin = 'administrateur';
 	
 
 	if (mdp == test && id == idadmin ){
 		document.getElementById('secondStep').style.display = "block";
 		document.getElementById('firstStep').style.display = "none";
-		
+		faireLaListe();
 	}
 	else{
 		alert("mot de passe ou identifiant incorrect");
+		
 	}	
 }
 
@@ -44,24 +78,25 @@ de plus elle fait apparaitre le nom et prénom du client
 
 function rechercheNouveau(client){
 
-	var nouveauClient = document.getElementById(client).value;
+	 nouveauClient = document.getElementById(client).value;
 	
 	if (nouveauClient != '' ){
 	
 	document.getElementById('fourthStep').style.display = "block";
-	document.getElementById('thirdStep').style.display= "none";
 	document.getElementById('secondStep').style.display = 'none';
 	
 	
-	var nomPrenom = document.createElement('p');
+	nomPrenom = document.createElement('p');
 	nomPrenom.id= 'nomPrenom';
 
 
-	var nom= document.getElementById('AfficherNom');
+	nom= document.getElementById('AfficherNom');
 	nom.appendChild(nomPrenom);
 
-	var nomText= document.createTextNode(nouveauClient);
+ 	nomText= document.createTextNode(nouveauClient);
 	nomPrenom.appendChild(nomText);
+
+	return(nouveauClient);
 	
 	
 	
@@ -75,37 +110,6 @@ function rechercheNouveau(client){
 }
 
 
-/*rechercheNouveau: fonction qui permet de passer sur la 4e page 
-si on click sur ok lors de la recherche client ancien.
- de plus elle fait apparaitre le nom et prénom du client
-  en haut à gauche. Si l'entrez est vide la fonction renvoie 
-  un message d'erreur*/
-
-function rechercheAncien(){
-
-	var clientTraite=document.getElementById('clientTraite').value;
-	
-	if (clientTraite != '' ){
-
-	var clientTraite = document.getElementById('clientTraite').value;
-	document.getElementById('fourthStep').style.display = "block";
-	document.getElementById('thirdStep').style.display= "none";
-
-	var nomPrenom = document.createElement('p');
-	nomPrenom.id='nomPrenom';
-	
-	var nom = document.getElementById('AfficherNom');
-	nom.appendChild(nomPrenom);
-
-	var nomText= document.createTextNode(clientTraite);
-	nomPrenom.appendChild(nomText);
-
-	}else { 
-		alert("vous devez entrer le nom et le prénom d'un client");
-
-	}
-
-}
 
 
 /**/
@@ -118,23 +122,20 @@ leséléments enfants sont ceux que l'on crée dans le javascript*/
 /**/	
 function element4(){
 		
-		var dossier= document.getElementById('lienDossier');
-		var parentDossier = document.getElementById('elementDossier');
-		parentDossier.removeChild(dossier);
 		
 
-		var nom= document.getElementById('nomPrenom');
-		var parentNom = document.getElementById('AfficherNom');
-		parentNom.removeChild(nom);
+		nomEnfant= document.getElementById('nomPrenom');
+		parentNom = document.getElementById('AfficherNom');
+		parentNom.removeChild(nomEnfant);
 
 	
-		var carte= document.getElementById('nouveauLien');
-		var parentCarte = document.getElementById('cartes');
-		parentCarte.removeChild(carte);	
+		carteEnfant= document.getElementById('nouveauLien');
+		parentCarte = document.getElementById('cartes');
+		parentCarte.removeChild(carteEnfant);	
 
-		var carte2= document.getElementById('lienCarte');
-		var parentCarte2 = document.getElementById('carte2');
-		parentCarte2.removeChild(carte2);		
+		carte2Enfant= document.getElementById('lienCarte');
+		parentCarte2 = document.getElementById('carte2');
+		parentCarte2.removeChild(carte2Enfant);		
 		
 		
 		alert('Les éléments de la page ont été supprimé');
@@ -202,35 +203,6 @@ grace à la fonction appendChild on insère l'élément enfant (élément a)qu'o
   on insère se text dans l'élément <a> grace à la fonction appendChild  */
 
 
-function elementDossierNouveau(client){
-	var lienDossier= document.createElement('a');
-	lienDossier.id='lienDossier';
-	lienDossier.href = 'http://www.siteduzero.com';
-
-	document.getElementById('elementDossier').appendChild(lienDossier);
-
-	var lienDossierText = document.createTextNode("son Dossier");
-	lienDossier.appendChild(lienDossierText);
-
-
-}
-
-/*idem que audessus la différence c'est que pour l'activer 
-il faut rechercher un client ancien sur la page html*/
-
-
-function elementDossierAncien(){
-
-	var lienDossier= document.createElement('a');
-	lienDossier.id='lienDossier';
-	lienDossier.href = 'http://www.siteduzero.com';
-
-	document.getElementById('elementDossier').appendChild(lienDossier);
-
-	var lienDossierText = document.createTextNode("son Dossier");
-	lienDossier.appendChild(lienDossierText);
-
-}
 
 
 
@@ -247,19 +219,19 @@ function lesCartesNouveau(){
 
 /*la première partie permet de créer un lien qui permettra d'agrandir la carte
 lorsqu'on apuyera sur "afficher en grand" */
-	var nouveauLien = document.createElement('a');
-nouveauLien.id='nouveauLien';
-nouveauLien.href = 'afficherCarte';
-document.getElementById('cartes').appendChild(nouveauLien);
+	nouveauLien = document.createElement('a');
+	nouveauLien.id='nouveauLien';
+	nouveauLien.href = 'afficherCarte';
+	document.getElementById('cartes').appendChild(nouveauLien);
 
-var nouveauLienText = document.createTextNode("afficher en grand");
-nouveauLien.appendChild(nouveauLienText);
+	nouveauLienText = document.createTextNode("afficher en grand");
+	nouveauLien.appendChild(nouveauLienText);
 
 /*la deuxième partie permet d'afficher la carte sur la page
 dans le css on limite la taille de la carte pour qu'elle reste petite
 */
 
-	var lienCarte= document.createElement('img');
+	lienCarte= document.createElement('img');
 	lienCarte.id='lienCarte';
 	lienCarte.class='imgCarte';
 	lienCarte.src ='liste_clients_nouveaux/anthonioz_louis/maps2.png';
@@ -279,8 +251,8 @@ displayImg(e.currentTarget);
 /*la fonction displayImg permet de charger la carte grace à la l'outil load */
 
 function displayImg(lien){
-	var img=new Image();
-	var overlay = document.getElementById('overlay');
+	 img=new Image();
+	overlay = document.getElementById('overlay');
 
 	  img.addEventListener('load', function() {
         overlay.innerHTML = '';
@@ -302,86 +274,42 @@ document.getElementById('overlay').addEventListener('click', function(e) {
 	
 
 
-/*ici mê^me pricipe qu'au dessus la différence est du coté html
- c'est la recherche client ancien qui le déclenche*/
-
-function lesCartesAncien(){
-
-
-var nouveauLien = document.createElement('a');
-nouveauLien.id='nouveauLien';
-nouveauLien.href = 'afficherCarte';
-document.getElementById('cartes').appendChild(nouveauLien);
-
-var nouveauLienText = document.createTextNode("afficher en grand");
-nouveauLien.appendChild(nouveauLienText);
-
-
-
-
-	var lienCarte= document.createElement('img');
-	lienCarte.id='lienCarte';
-	lienCarte.class='imgCarte';
-	lienCarte.src ='liste_clients_nouveaux/anthonioz_louis/maps2.png';
-
-	document.getElementById('carte2').appendChild(lienCarte);
-
-
-
-
-
-
-
-
-nouveauLien.addEventListener('click', function(e){
-e.preventDefault();
-displayImg(e.currentTarget);
-
-});
-
-function displayImg(lien){
-	var img=new Image();
-	var overlay = document.getElementById('overlay');
-
-	  img.addEventListener('load', function() {
-        overlay.innerHTML = '';
-        overlay.appendChild(img);
-    });
-
-    img.src = lienCarte.src;
-    overlay.style.display = 'block';
-    overlay.innerHTML = '<span>Chargement en cours...</span>';
-
-}
-
-document.getElementById('overlay').addEventListener('click', function(e) {
-    // currentTarget est utilisé pour cibler l'overlay et non l'image
-    e.currentTarget.style.display = 'none';
-});
-}
-	
-
+/**/
+/**/
 /*function envoyermail pour afficher la page 5
 en appuyant sur envoyermail on déclenche la fonction
 */
+/**/
+/**/
 
 function envoyerMail(){
 	document.getElementById('fifthStep').style.display = "block";
 	document.getElementById('sendMail').style.display="none";
 	document.getElementById('fourthStep').style.display="none";
 }
-        
+
+
+/**/
+/**/        
 /* fonction qui permet de joindre un fichier en faisant 
 apparaitre le block joindre un fichier */
+/**/
+/**/
+
 
 function choisirFichier(){
-	var joindre= document.getElementById('joindre');
-joindre.style.display= "block";
+	joindre= document.getElementById('joindre');
+	joindre.style.display= "block";
 
 }
 
+
+/**/
+/**/
 /* fonction pour permet de télécharger le ficher choisi par 
 l'admi et de le placer dans le dossier'farmingData*/
+/**/
+/**/
 
 function telechargerFichier(){
 
@@ -434,3 +362,95 @@ function telechargerFichier(){
 	}
 });
 	}
+
+
+/**/
+/**/
+/*fonction qui créer la liste déroulante des client 
+en se servant du table listeClient
+cela permet à l'administrateur de choisir le client qu'il souhaite*/
+/**/
+/**/
+
+
+ 
+	function faireLaListe(){
+
+
+	deroulo = document.getElementById('deroulo');
+		
+	var length= listeClient.length;
+	ajouterClient=[];
+	
+
+
+	for (var i=0; i<length; i++){
+
+	ajouterClient[i]= document.createElement('option');
+	ajouterClient[i].id= listeClient[i];
+	deroulo.appendChild(ajouterClient[i]);
+	var ajouterClientText = document.createTextNode(listeClient[i]);
+	ajouterClient[i].appendChild(ajouterClientText);
+
+
+}
+}
+
+
+/**/
+/**/
+/*fonction qui supprime le client de la liste
+ et le rajoute en fin de la liste*/
+/**/
+/**/
+
+
+function mettreClientBoutListe(){
+
+
+	nomClient= nouveauClient; 
+	alert(nomClient);
+
+	var i =0;
+
+	while (listeClient[i]!== nomClient){
+		i++;
+
+	}
+		
+
+			listeClient.splice(i,1);
+			listeClient.push(nomClient);
+			alert(listeClient);
+
+			supprimerLaListe();
+	}
+
+/**/
+/**/
+/*fonction qui supprime le client de la liste déroulante 
+et le remet en bas de cette liste*/
+/**/
+/**/
+
+
+function supprimerLaListe(){
+
+	deroulo = document.getElementById('deroulo');
+	var length = listeClient.length;
+	for (var i=0; i<length; i++){
+		var listeClientEnfant= document.getElementById(listeClient[i]);
+		deroulo.removeChild(listeClientEnfant);
+
+		alert('le client à été traité');
+		
+
+	}
+}
+
+/**/
+
+
+
+
+

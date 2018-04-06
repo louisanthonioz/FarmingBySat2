@@ -13,6 +13,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/connect.js"></script>
 	<script src="js/formular.js"></script>
+
     
 </head>
 <body>
@@ -36,7 +37,7 @@
 		 <img id="explainImages" class="imgadmin3" src="images/admin3.png"/>
         <input type="text" id="identifiant" placeholder="ID">
          <input type="password" placeholder="Enter Password" id="password">
-		 <input type="button" value = "Go!" id="bouton1" onclick="goSecondStep()"> 
+		 <input type="button" value = "Go!" id="bouton1" onclick="goSecondStep()";> 
 		 
 </div>
 </div>
@@ -48,98 +49,20 @@
 
 	  <p>
 		<h2>Séléctionnez le client</h2>
-         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient'); elementDossierNouveau();lesCartesNouveau();" id="nouveauClientButton"/><br/><br/><br/>
+         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient');lesCartesNouveau();" id="nouveauClientButton"/><br/><br/><br/>
+
+
         <label>Liste des clients :</label>
-        <select id="deroulo">
-          <option value="" id="choix"  disabled selected>Sélectionnez ici</option>
-          <option value="Jean-Pierre Bidule">Jean-Pierre Bidule</option>
-          <option value="Arnaud Machin">Arnaud Machin</option>
-          <option value="x">x</option>
-		  <option value="y">y</option>
-		  <option value="z">z</option>
-        </select><input type="button" value="ok" onclick="rechercheNouveau('deroulo'); elementDossierNouveau();lesCartesNouveau();"
+        <select id="deroulo" >
+
+
+        </select>
+
+        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau();"
                  id="nouveauClientButton"/>
       </p>
 	</div>
 </div>
-
-<!--la troisième page permet de selectionner un client, lorsque celui ci est sélectionner l'admi appui sur ok et plusieurs fonction vont se lancer, on arrive ensuite sur la quatrième page -->
-
-<div id="thirdStep">
-<h2>LISTE DES CLIENTS</h2>
-</br>
-  
-  <table>
-    <thead id="recherche">
-       <!--ici il y a une différence entre client nouveau et client traité -->
-       <tr> 
-            <th> Rechercher <input type="text" placeholder="nouveau client" id="nouveauClient"/>
-        
-                <input type="button" value="ok" onclick="rechercheNouveau(); elementDossierNouveau();lesCartesNouveau();"
-                 id="nouveauClientButton"/>
-
-            <!-- les trois fonction vont se lancer lorsque l'admi appuie sur le boutton ok, c'est le formular.js qui va exécuter les fonctions-->
-
-            </th>
-
-                <th> Rechercher <input type="text" placeholder="client traité" id="clientTraite"/>
-       
-                <input type="button" value="ok" onclick="rechercheAncien();elementDossierAncien();lesCartesAncien();"   
-                id="ClientTraiteButton"/>
-            </th>
-    
-        </tr>
-    </thead>
-
-
-
-</table>
-<br/>
-<br/>
-
-
-<table>
-    <thead>
-
-     <!-- on insère un tableau; à gauche nouveau client à droite ancien client. -->
-       <tr>
-            <th><div id="ouvrirNouveau">Nouveau Client
-            </div>
-            </th>
-
-            <th><div id="ouvrirAncien">Client Traité 
-            </div></th>
-        </tr>
-    </thead>
-
-  <!--ensuite on insère les deux block en dessous pour ouvrir la liste des nouveaux clients ou la liste des anciens clients, ceci n'a pas encore été réalisé pour l'instant il n'y a que le visuel html et css-->
-
-    <tbody id="ouvrir">
-
-        <tr>
-            <td><div id="listeNouveau">Liste des nouveaux clients<br/><input type="button" value="ouvrir" onclick="ouvrirNouveau()" id="ouvrirNouveauButton"/>
-           </div></td>
-
-        <td><div id="listeAncien">Liste des clients traités<br/><input type="button" value="ouvrir" onclick="ouvrirAncien()" id="ouvrirAncienButton"/>
-        </div>
-
-        </td>
-    </tr>
-
-
-    </tbody>
-
-
-
-</table>
-
-
-<!--ici il faut ouvrir la liste des dossiers clients-->
-
-</div>
-
-
-
 
 
 
@@ -155,18 +78,138 @@ le java script va se charger d'aller récupérer le bon client-->
 
 
 <div id="AfficherNom"></div><br/><br/>
+<!---->
+<!---->
+<!---->
+<!---->
 
-<!--id: aligner permet de mettre sur la même ligne les éléments du dossier et la carte -->
+<!---->
+<!---->
+<!-- page 1: renseignement générale du client et de son champ-->
+<!---->
+<!---->
+<!---->
+
+
+<div id="renseignementClientPage1">
+
+<div id="informationsPersonnellesClient"><h2>Informations personnelles du client</h2>
+
+<div id="nomClient">Nom : 
+</div><br/>
+<div id="prenomClient">Prénom : </div><br/>
+<div id="telephoneClient">Téléphone : </div><br/>
+<div id="adresseMailClient">Adresse mail : </div><br/>
+<div id="rueClient">Rue : </div><br/>
+<div id="codePosatalClient">Code Postal : </div><br/>
+<div id="villeClient">Ville : </div>
+
+
+</div>
+
+<div id="informationsAgricolesClient">
+    <h2>Informations agricoles du client</h2>
+
+<h3>Parcelaire</h3><div id="parcelaireClient">
+
+    <div id="nombreHectareClient">Nombre d'hectares : </div><br/>
+    <div id="nombreParcelleClient">Nombre de parcelles : </div><br/>
+    <div id="situationParcelleClient">Situation de la parcelle : </div><br/>
+</div>
+
+<h3>Souscrit</h3><div id="souscritClient">
+        <div id="declarationPACClient">Déclaration PAC client : </div><br/>
+    </div>
+
+<h3>Parcelles</h3><div id="parcellesClient">
+</div><br/>
+
+<h3>Cartes</h3><div id="cartesClient">
 
 <p id="aligner">
 
-<div id="elementDossier">
-    les éléments du dossier<br/>
+<div id="cartes">
+    <a></a>la carte<br/>
+    <div id="carte2"></div><br/>
+</div>
+<!--id: overlay est utiliser pour afficher la carte en grand, le javascript gère cela -->
+
+<div id="overlay"></div>
+</p>
+
+</div>
+</div>
+</div>
+
+<!---->
+<!---->
+<!-- deuxième page: elle concerne chaque parcelle en appuyant sur le lien de chaque parcelle l'admi peut alors disposer des informations concernant la parcelle-->
+<!---->
+<!---->
+
+
+
+
+<div id="renseignementClientPage2">
+<div id="mettreNumeroParcelle"></div>
+
+
+<h3>Rotation</h3><div id="Rotation">
+    <div id="culturPrecedente">Culture précédente : </div><br/>
+    <div id="cultureSuivante">Culture suivante : </div><br/>
+    <div id="dateRecolte">Date récolte précédente : </div><br/>
+</div>
+
+
+<h3>Fertilisation</h3>
+<div id="fertilisation">
+    <div id="planFumure">Plan de fumure : </div><br/>
+    <div id="cartographieFertilisation">Cartographie de fertilisation : </div><br/>
+    <div id="analyseSol">Analyse des sols : </div><br/>
+    <div id="reliquatsHiver">Reliquats sortie d'hiver : </div><br/>
+</div>
+
+<h3>Couvert Végétal</h3>
+
+<div id="couverVégétal">
+    <div id="typeSemoir">Type de semoir du couvert : </div><br/>
+    <div id="modeDestruction">Mode de destruction du couvert : </div><br/>
+    <div id="problemeParcelle">Problème de la parcelle : </div><br/>
     </div>
 
-<div id="cartes"><a></a>la carte<br/><div id="carte2"></div><br/></div><!--id: overlay est utiliser pour afficher la carte en grand, le javascript gère cela -->
-<div id="overlay"></div>
-</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<h3>Rendement</h3>
+<div id="Rendement">
+    <div id='leRendement'>Le rendement (Q/hectares) : </div><br/>
+    <div id="cartographieRendement">Cartographie de rendement : </div><br/>
+
+</div>
+
+<h3>Remarque</h3>
+
+<div id="remarque">
+    </div>
+
+<div id="retour3">
+    <input type="button" value="retour" id="retour3" onclick="retour3()"> fiche client
+
+</div>
+   </div>
+
+
+
+
+
+ <script src="js/infoClient.js"></script>
+
+<!---->
+<!---->
+<!---->
+<!---->
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 <!--on revient sur la quatrième page
@@ -186,11 +229,8 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
      <input type="button" value="Envoyer" onclick="envoyerMail()" id = "envoyerButton"/>un mail
 
 
-
-
-
-
     </div>
+
 
 
 <br/><br/>
@@ -252,7 +292,8 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
 
                 <div class="form-group">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary" id="envoyerButton">Envoyer</button>
+                        <button type="submit" class="btn btn-primary" id="envoyerButton" onclick="mettreClientBoutListe();
+            faireLaListe()">Envoyer</button>
 
                       
                     </div>
