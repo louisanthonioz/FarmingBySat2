@@ -49,7 +49,7 @@
 
 	  <p>
 		<h2>Séléctionnez le client</h2>
-         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient');lesCartesNouveau();" id="nouveauClientButton"/><br/><br/><br/>
+         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient');lesCartesNouveau(); baseDeDonneesClient();" id="nouveauClientButton"/><br/><br/><br/>
 
 
         <label>Liste des clients :</label>
@@ -58,7 +58,7 @@
 
         </select>
 
-        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau();"
+        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau(); baseDeDonneesClient();"
                  id="nouveauClientButton"/>
       </p>
 	</div>
@@ -101,7 +101,7 @@ le java script va se charger d'aller récupérer le bon client-->
 <div id="telephoneClient">Téléphone : </div><br/>
 <div id="adresseMailClient">Adresse mail : </div><br/>
 <div id="rueClient">Rue : </div><br/>
-<div id="codePosatalClient">Code Postal : </div><br/>
+<div id="codePostalClient">Code Postal : </div><br/>
 <div id="villeClient">Ville : </div>
 
 
@@ -155,32 +155,32 @@ le java script va se charger d'aller récupérer le bon client-->
 
 
 <h3>Rotation</h3><div id="Rotation">
-    <div id="culturPrecedente">Culture précédente : </div><br/>
-    <div id="cultureSuivante">Culture suivante : </div><br/>
-    <div id="dateRecolte">Date récolte précédente : </div><br/>
+    <div id="culturePrecedenteClient">Culture précédente : </div><br/>
+    <div id="cultureSuivanteClient">Culture suivante : </div><br/>
+    <div id="dateRecolteClient">Date récolte précédente : </div><br/>
 </div>
 
 
 <h3>Fertilisation</h3>
 <div id="fertilisation">
-    <div id="planFumure">Plan de fumure : </div><br/>
-    <div id="cartographieFertilisation">Cartographie de fertilisation : </div><br/>
-    <div id="analyseSol">Analyse des sols : </div><br/>
-    <div id="reliquatsHiver">Reliquats sortie d'hiver : </div><br/>
+    <div id="planFumureClient">Plan de fumure : </div><br/>
+    <div id="cartographieFertilisationClient">Cartographie de fertilisation : </div><br/>
+    <div id="analyseSolClient">Analyse des sols : </div><br/>
+    <div id="reliquatsHiverClient">Reliquats sortie d'hiver : </div><br/>
 </div>
 
 <h3>Couvert Végétal</h3>
 
 <div id="couverVégétal">
-    <div id="typeSemoir">Type de semoir du couvert : </div><br/>
-    <div id="modeDestruction">Mode de destruction du couvert : </div><br/>
-    <div id="problemeParcelle">Problème de la parcelle : </div><br/>
+    <div id="typeSemoirClient">Type de semoir du couvert : </div><br/>
+    <div id="modeDestructionClient">Mode de destruction du couvert : </div><br/>
+    <div id="problemeParcelleClient">Problème de la parcelle : </div><br/>
     </div>
 
 <h3>Rendement</h3>
 <div id="Rendement">
-    <div id='leRendement'>Le rendement (Q/hectares) : </div><br/>
-    <div id="cartographieRendement">Cartographie de rendement : </div><br/>
+    <div id='leRendementClient'>Le rendement (Q/hectares) : </div><br/>
+    <div id="cartographieRendementClient">Cartographie de rendement : </div><br/>
 
 </div>
 

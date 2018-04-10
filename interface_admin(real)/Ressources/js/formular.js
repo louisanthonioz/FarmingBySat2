@@ -151,6 +151,8 @@ function element4(){
 function retour(){
 	document.getElementById('fourthStep').style.display = "none";
 	document.getElementById('secondStep').style.display= "block";
+	document.getElementById('renseignementClientPage2').style.display='none';
+	supprimerBaseDeDonneesClient();
 
 
 }
@@ -304,6 +306,10 @@ function choisirFichier(){
 }
 
 
+
+
+
+
 /**/
 /**/
 /* fonction pour permet de télécharger le ficher choisi par 
@@ -447,9 +453,6 @@ function supprimerLaListe(){
 
 	}
 }
-
-/**/
-
 
 
 
