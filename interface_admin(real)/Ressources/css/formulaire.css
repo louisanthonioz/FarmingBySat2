@@ -410,3 +410,18 @@ option[value=""][disabled] {
 
 
 }
+
+#nomDuClient, #prenomDuClient, #adresseMailDuClient, #telephoneDuClient
+, #rueDuClient, #codePostalDuClient, #villeDuClient, #nombreHectareDuClient, 
+#nombreParcelleDuClient, #situationParcelleDuClient,
+#declarationPACDuClient, #culturePrecedenteDuClient,
+#cultureSuivanteDuClient, #dateRecolteDuClient,
+#planFumureDuClient, 
+#cartographieFertilisationDuClient, #cartographieRendementDuClient,
+#leRendementDuClient, #problemeParcelleDuClient,
+#modeDestructionDuClient, #typeSemoirDuClient,
+#analyseSolDuClient, #reliquatsHiverDuClient
+
+{
+    float: right;
+}
