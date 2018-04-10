@@ -168,7 +168,8 @@ function retour2(){
 	document.getElementById('fifthStep').style.display = "none";
 	document.getElementById('fourthStep').style.display= "block";
     document.getElementById('sendMail').style.display="block";
-	
+	document.getElementById('pageCarte').style.display = "none";
+	document.getElementById('renseignementClientPage2').style.display = "none";
 
   
 		

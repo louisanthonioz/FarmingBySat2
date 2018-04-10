@@ -83,6 +83,7 @@ baseDeDonneesParcelleClient();
 /**/
 		
  function retour3(){
+ 	document.getElementById('pageCarte').style.display='none';
  	document.getElementById('renseignementClientPage2').style.display='none';
 	document.getElementById('informationsPersonnellesClient').style.display= 'block';
 	document.getElementById('informationsAgricolesClient').style.display= 'block';
@@ -250,7 +251,7 @@ function baseDeDonneesClient(){
 /**/
 /**/
 /*fonction qui crée les éléments de la base de données
- à insérer concernant les parcelle
+ à insérer concernant les parcelles
  cad dans la page parcelle*/
 /**/
 /**/
@@ -415,6 +416,17 @@ function baseDeDonneesParcelleClient(){
 
 	var cartographieRendementClientText = document.createTextNode("ici on appelle la cartographie de rendement du client");
 	cartographieRendementDuClient.appendChild(cartographieRendementClientText);
+
+			/*on vrée la remarque parcelle*/
+
+		var remarqueDuClient = document.createElement('div');
+	remarqueDuClient.id ='remarqueDuClient';
+	var remarqueClientParent=document.getElementById('remarqueClient');
+
+	remarqueClientParent.appendChild(remarqueDuClient);
+
+	var remarqueClientText = document.createTextNode("ici on appelle la remarque sur la parcelle du client");
+	remarqueDuClient.appendChild(remarqueClientText);
 
 
 
@@ -655,7 +667,24 @@ appuie sur retour ver le client*/
 
 		cartographieRendementClientParent.removeChild(cartographieRendementClientEnfant);
 
-		
+			/* on supprime la remarque*/
 
 
+		var remarqueClientParent=document.getElementById('remarqueClient');
+		var remarqueClientEnfant=document.getElementById('remarqueDuClient');
+
+		remarqueClientParent.removeChild(remarqueClientEnfant);
+
+
+
+	}
+
+
+
+	function voirCarteClient(){
+
+		document.getElementById('pageCarte').style.display='block';
+		document.getElementById('informationsPersonnellesClient').style.display= 'none';
+		document.getElementById('informationsAgricolesClient').style.display= 'none';
+		document.getElementById('retour').style.display= 'none';
 	}

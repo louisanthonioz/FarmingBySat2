@@ -8,22 +8,23 @@
 {
     display:inline-block;
     position: relative;
-    margin: 2% 4% 2% auto;
-    padding: 2%;
+    margin:2vw;
+    padding: 2vw;
     height: 20vh;
-    width: 20vh;
-	margin-left : 540px;
-    border-radius: 5px;
+    width: auto;
+    margin-left : 43vw;
+    border-radius: 5vw;
     background-color: rgba(255,255,255,0.8);
     float: center;
 }
 #firstStep{display: block;}
 
 #bouton1 {
-padding: 5px 10px; 
+height: 5vh;
+width: 5vw; 
 background: brown; 
 color: white; 
-border-radius: 5px;
+border-radius: 1vw;
 }
 #bouton1:hover {
 background: green; 
@@ -33,28 +34,33 @@ background: green;
 
 #password, #identifiant
 {
-    margin-left : 549px;
+    margin-left : 45vw;
+    border-radius: 2vw;
+    height: 5vh;
+    text-align: center;
+
 }
 h1
 {
     color: brown;
-    margin-left: 400px;
+    text-align: center;
     font-size: 48;
-	margin-top : 20px;
+    margin-top : 5vh;
+
 }
 h2
 {
-
+    text-align: center;
     color: #9ACD32;
     font-size: 25;
-	
-	
+    
+    
 }
 
 
 #Deroulo
 {
-	display:inline-block;
+    display:inline-block;
     -moz-appearance: none;
     -webkit-appearance: none;
     overflow: hidden;
@@ -70,20 +76,20 @@ option[value=""][disabled] {
 {
     display: none;
     background-color: rgba(255,255,255,0.8);
-    box-shadow: 0 0 16px grey;
-    border-radius: 5px;
-	margin-top : 60px;
-	margin-left : 290px;
-    position: relative;
+    box-shadow: grey;
+    border-radius:5vw;  
     text-align: center;
-    width: 120vh;
-	height : 30vh;
+    padding: 1vw;
+    width: 50vw;
+    margin-left:25vw;
+    margin-top: 10vh;
+    
 }
 
 /**/
 /**/
 /**/
-/*EN DESSOUS LA PAGE 5*/
+/*EN DESSOUS LA PAGE 3*/
 /**/
 /**/
 /**/
@@ -92,7 +98,7 @@ option[value=""][disabled] {
 
 #thirdStep
 {
-	
+    
     display: none;
     margin: 2% auto 2% 4%;
     padding: 2%;
@@ -111,7 +117,7 @@ option[value=""][disabled] {
 
 #recherche
 {
-	display: inline-block;
+    display: inline-block;
     position: relative;
     margin-left: 30px ;
     margin-right: auto;
@@ -120,12 +126,13 @@ option[value=""][disabled] {
 }
 
 #nouveauClient, #deroulo, #nouveauClientButton, #clientTraite, 
-#clientTraiteButton, #envoyerButton, #joindreButton, #joindre
+#clientTraiteButton, #envoyerButton, #joindreButton, #joindre,
+#voirCarteClient, #retourPageCarte
 {
-	display: inline-block;
-	
-	background : none;
-	font-size: 2vh;
+    display: inline-block;
+    
+    background : none;
+    font-size: 2vh;
     border-radius: 1vh;
     height: 6vh;
     min-width: 5vh;
@@ -133,14 +140,20 @@ option[value=""][disabled] {
 
 
 }
+#retourPage
+{
+    float:left;
+    
+}
+
 
  #ouvrirAncienButton, #ouvrirNouveauButton
  {
- 	display: inline-block;
-	position: relative;
-	margin-left: 30px;
-	background : none;
-	font-size: 2vh;
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    background : none;
+    font-size: 2vh;
     border-radius: 1vh;
     height: 6vh;
     width: 10vh;
@@ -148,27 +161,27 @@ option[value=""][disabled] {
 
 #ouvrirAncien
 {
-	position: relative;
-	margin-right:20px;
+    position: relative;
+    margin-right:20px;
 }
 
 #ouvrirNouveau
 {
-	position: relative;
-	margin-right: 40px;
-	
+    position: relative;
+    margin-right: 40px;
+    
 }
 
 #listeAncien
 {
-	position: relative;
-	margin-left: 50px;
+    position: relative;
+    margin-left: 50px;
 }
 
 #listeNouveau
 {
-	position: relative;
-	margin-left: 30px;
+    position: relative;
+    margin-left: 30px;
 }
 
 
@@ -190,15 +203,13 @@ option[value=""][disabled] {
 {
     
     display: none;
-    margin: 2% auto 2% 4%;
-    padding: 2%;
-    height: auto;
-    width: 70vh;
+    padding: 2vw;
+    border-radius: 5vw;
+    width:70vw;
     background-color: rgba(255,255,255,0.8);
     box-shadow: 0 0 16px grey;
-    border-radius: 5px;
     position: relative;
-    margin: 1% auto 1% auto;
+    margin: 10vw;
     text-align: center;
 
 
@@ -387,6 +398,15 @@ option[value=""][disabled] {
 #informationsPersonnellesClient, #informationsAgricolesClient
 {
     display: inline-block;
+    padding: 2vw;
+    border-radius: 5vw;
+    width:60vw;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 16px grey;    
+    margin-top: 10vh;
+    margin-left: 2vw;
+
+   
    
 
   
@@ -420,8 +440,34 @@ option[value=""][disabled] {
 #cartographieFertilisationDuClient, #cartographieRendementDuClient,
 #leRendementDuClient, #problemeParcelleDuClient,
 #modeDestructionDuClient, #typeSemoirDuClient,
-#analyseSolDuClient, #reliquatsHiverDuClient
+#analyseSolDuClient, #reliquatsHiverDuClient,
+#remarqueDuCient
 
 {
     float: right;
+}
+
+#pageCarte
+{
+    display: none;
+    padding: 2vw;
+    border-radius: 5vw;
+    width:60vw;
+    height: 35vh;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 16px grey;    
+    margin-left: 2vw;
+    margin-top: 5vh;
+}
+
+#renseignementClientPage2
+{
+    
+    padding: 2vw;
+    border-radius: 5vw;
+    width:60vw;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 16px grey;    
+    margin-top: 10vh;
+    margin-left: 2vw;
 }

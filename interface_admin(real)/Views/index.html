@@ -35,7 +35,7 @@
 <div class="connect_box"> <!--écran d'entrée du mot de passe (firstep)-->
 
 		 <img id="explainImages" class="imgadmin3" src="images/admin3.png"/>
-        <input type="text" id="identifiant" placeholder="ID">
+        <input type="text" id="identifiant" placeholder="ID"><br/><br/>
          <input type="password" placeholder="Enter Password" id="password">
 		 <input type="button" value = "Go!" id="bouton1" onclick="goSecondStep()";> 
 		 
@@ -58,7 +58,7 @@
 
         </select>
 
-        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau(); baseDeDonneesClient();"
+        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau();baseDeDonneesClient();"
                  id="nouveauClientButton"/>
       </p>
 	</div>
@@ -77,7 +77,7 @@
 le java script va se charger d'aller récupérer le bon client-->
 
 
-<div id="AfficherNom"></div><br/><br/>
+<div id="AfficherNom"></div>
 <!---->
 <!---->
 <!---->
@@ -124,7 +124,24 @@ le java script va se charger d'aller récupérer le bon client-->
 <h3>Parcelles</h3><div id="parcellesClient">
 </div><br/>
 
-<h3>Cartes</h3><div id="cartesClient">
+<h3>Cartes</h3>
+
+<div id="cartesClient"><input type="button" value="Voir" id="voirCarteClient" onclick="voirCarteClient()"> les cartes</div>
+
+</div>
+</div>
+
+<!---->
+<!---->
+<!---->
+<!--Page des cartes du client-->
+<!---->
+<!---->
+<!---->
+
+
+
+<div id="pageCarte">
 
 <p id="aligner">
 
@@ -137,9 +154,15 @@ le java script va se charger d'aller récupérer le bon client-->
 <div id="overlay"></div>
 </p>
 
+<div id="retourPage">
+    <input type="button" value="retour" id="retourPageCarte" 
+    onclick="retour3()"> fiche client
+
 </div>
 </div>
-</div>
+
+
+
 
 <!---->
 <!---->
@@ -186,8 +209,8 @@ le java script va se charger d'aller récupérer le bon client-->
 
 <h3>Remarque</h3>
 
-<div id="remarque">
-    </div>
+<div id="remarqueClient">
+    </div><br/><br/>
 
 <div id="retour3">
     <input type="button" value="retour" id="retour3" onclick="retour3()"> fiche client
@@ -209,7 +232,7 @@ le java script va se charger d'aller récupérer le bon client-->
 
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>
 
 
 <!--on revient sur la quatrième page
