@@ -13,6 +13,8 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/connect.js"></script>
 	<script src="js/formular.js"></script>
+    
+
 
     
 </head>
@@ -219,6 +221,100 @@ le java script va se charger d'aller récupérer le bon client-->
    </div>
 
 
+<!---->
+<!---->
+<!---->
+<!--La partie pour trouver les plantes adaptées pour les couverts végétaux
+
+dans un premier temps l'administrateur choisit les entrées entre des valeurs possible-->
+<!---->
+<!---->
+<!---->
+
+
+<div id="resoudreProbleme">
+    
+
+<label>Quantité d'azote  </label>
+        <select id="quantiteAzote">
+            <option>Très Beaucoup
+            </option>
+
+            <option>Beaucoup
+            </option>
+
+            <option>Normal
+            </option>
+
+            <option>Peu
+            </option>
+
+            <option>Très Peu
+            </option>
+
+        </select>
+
+<label>Quantité de carbone  </label>
+        <select id="quantiteCarbone" >
+             <option>Très Beaucoup
+            </option>
+
+            <option>Beaucoup
+            </option>
+
+            <option>Normal
+            </option>
+
+            <option>Peu
+            </option>
+            
+            <option>Très Peu
+            </option>
+        </select>
+
+<label>Compaction  </label>
+        <select id="compaction" >
+             <option>En Surface
+            </option>
+
+            <option>En Profondeur
+            </option>
+
+            <option>Horizon Compacté
+            </option>
+
+            <option>Normal
+            </option>
+            
+            <option>Décompacté
+            </option>
+        </select>
+
+
+<input type="button" value="valider" id="validerChoix" onclick="voirResultat();afficherResultat()"><input type="button" value="recommencer" id="recommencer" onclick="recommencer()">
+
+
+</div>
+
+
+
+<!---->
+<!---->
+<!---->
+<!--Ici la page de résultatmontrant les plantes à insérer -->
+<!---->
+<!---->
+<!---->
+
+
+<div id="resultat"> Le résultat pour chaque plante correspond au pourcentage de la quantité maximale de la plante
+
+
+   
+
+
+
+</div>
 
 
 
@@ -233,6 +329,8 @@ le java script va se charger d'aller récupérer le bon client-->
 
 
 <br/><br/><br/><br/><br/><br/>
+
+
 
 
 <!--on revient sur la quatrième page

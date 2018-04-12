@@ -455,6 +455,6606 @@ function supprimerLaListe(){
 	}
 }
 
+/**/
+/**/
+/**/
+/*fonction qui montre les résultats */
+/**/
+/**/
+/**/
+
+
+function voirResultat(){
+
+	document.getElementById('resultat').style.display="block";
+	document.getElementById('validerChoix').style.display='none';
+	document.getElementById('recommencer').style.display='block';
+}
+
+/**/
+/**/
+/*fonction pour supprimer le resultat*/
+/**/
+/**/
+
+function recommencer(){
+
+	/*on supprime la plante1*/
+
+		var resultatParent=document.getElementById('resultat');
+		var plante1Enfant=document.getElementById('plante1');
+
+		resultatParent.removeChild(plante1Enfant);
+
+	/*on supprime la plante2*/
+
+		var resultatParent=document.getElementById('resultat');
+		var plante2Enfant=document.getElementById('plante2');
+
+		resultatParent.removeChild(plante2Enfant);
+
+	/*on supprime la plante3*/
+
+		var resultatParent=document.getElementById('resultat');
+		var plante3Enfant=document.getElementById('plante3');
+
+		resultatParent.removeChild(plante3Enfant);
+
+		document.getElementById('validerChoix').style.display='block';
+		document.getElementById('recommencer').style.display='none';
+		document.getElementById('resultat').style.display='none';
+
+		}
 
 
 
+
+/**/
+/**/
+/*fonction qui affiche les resultat sur la page
+de résultat
+il faut créer tous les cas possibles*/
+/**/
+/**/
+
+
+function afficherResultat(){
+
+
+
+	var quantiteAzote= document.getElementById('quantiteAzote').value;
+	var quantiteCarbone= document.getElementById('quantiteCarbone').value;
+	var compaction= document.getElementById('compaction').value;
+	alert(quantiteCarbone +' '+ quantiteAzote +' '+ compaction);
+		
+
+		/**/
+		/**/
+		/**/
+		/**/
+		/*Premiere partie: tous les cas avec une Scompaction en surface*/
+		/**/
+		/**/
+		/**/
+		/**/
+
+
+		/**/
+		/**/
+		/*cas 1*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 2*/
+		/**/
+		/**/
+
+		if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 3*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 4*/
+		/**/
+		/**/
+
+
+		if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 5*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 6*/
+		/**/
+		/**/
+
+
+		if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 7*/
+		/**/
+		/**/
+
+		if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 8*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 9*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 10*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Peu' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 11*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 12*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 13*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Normal' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 14*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Normal' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 15*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Normal' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 16*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 17*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 18*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 19*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 20*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 21*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 22*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 23*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 24*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 25*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Surface'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Avoine : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/**/
+		/**/
+		/*Deuxième partie: tous les cas avec une compaction en profondeur*/
+		/**/
+		/**/
+		/**/
+		/**/
+
+		/**/
+		/**/
+		/*cas 1*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Moutarde Blanche : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 2*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Moutarde Blanche : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+
+		/**/
+		/**/
+		/*cas 3*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 4*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 5*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 6*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Moutarde Blanche : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 7*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Moutarde Blanche : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 8*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 9*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 10*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Peu' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 11*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 12*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 13*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Normal' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 14*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Normal' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 15*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Normal' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 16*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 17*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 18*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 19*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 20*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 21*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 22*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 23*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 24*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 25*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'En Profondeur'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/**/
+		/**/
+		/*Troisième partie: tous les cas avec une compaction horizon compacté*/
+		/**/
+		/**/
+		/**/
+		/**/
+
+
+
+		/**/
+		/**/
+		/*cas 1*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 100%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 2*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 3*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 4*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Févérole : 25%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 5*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Févérole : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 6*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 100%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 7*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 8*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Févérole : 25%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 9*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Févérole : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 10*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Peu' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Févérole : 100%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 11*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 12*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 13*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Normal' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 14*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Normal' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 15*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Normal' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 16*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 30%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 17*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 30%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 18*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 30%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 19*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 30%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 20*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 30%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 21*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 22*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 23*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 24*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 25*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Horizon Compacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Févérole : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+
+		/**/
+		/**/
+		/**/
+		/**/
+		/*Quatrieme partie: tous les cas 
+		avec une compaction normal*/
+		/**/
+		/**/
+		/**/
+		/**/
+
+
+		/**/
+		/**/
+		/*cas 1*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 100%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 2*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 3*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 4*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 5*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 6*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 100%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 7*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 8*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 9*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 10*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Peu' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("lentille: 25%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 11*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 12*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 13*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Normal' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 14*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Normal' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("lentille : 25%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+
+		/**/
+		/**/
+		/*cas 15*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Normal' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("lentille : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 16*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 17*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("Navette : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 18*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("lentille : 25%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 19*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("lentille : 50%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 20*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("lentille : 75%");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 21*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 22*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 23*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 24*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 25*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Normal'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Radis : 20%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/**/
+		/**/
+		/*Cinquième partie: tous les cas avec une décompaction*/
+		/**/
+		/**/
+		/**/
+		/**/
+
+		/**/
+		/**/
+		/*cas 1*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 2*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 3*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 4*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 5*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 6*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 100%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 7*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 8*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 9*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 10*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Peu' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 11*/
+		/**/
+		/**/
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 12*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Normal' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 13*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Normal' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 14*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Normal' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 15*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Normal' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 16*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 17*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("Navette : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 18*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 25%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 19*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 50%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 20*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("lentille : 75%");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 21*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Navette : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 22*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Beaucoup' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("Navette : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 23*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Normal' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("lentille : 50%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+		/**/
+		/**/
+		/*cas 24*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("lentille : 75%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+		/**/
+		/**/
+		/*cas 25*/
+		/**/
+		/**/
+
+
+	if ( quantiteAzote== 'Très Peu' && quantiteCarbone == 'Très Beaucoup' && compaction == 'Décompacté'){
+		
+		/**/
+		/*composition plante1*/
+		/**/
+
+		var plante1 = document.createElement('div');
+	plante1.id ='plante1';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante1);
+
+	var plante1Text = document.createTextNode("lentille : 100%");
+	plante1.appendChild(plante1Text);
+
+
+		/**/
+		/*composition plante2*/
+		/**/
+
+	var plante2 = document.createElement('div');
+	plante2.id ='plante2';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante2);
+
+	var plante2Text = document.createTextNode("");
+	plante2.appendChild(plante2Text);
+
+
+		/**/
+		/*composition plante3*/
+		/**/
+
+	var plante3 = document.createElement('div');
+	plante3.id ='plante3';
+	var resultat=document.getElementById('resultat');
+
+	resultat.appendChild(plante3);
+
+	var plante3Text = document.createTextNode("");
+	plante3.appendChild(plante3Text);
+
+	}
+
+
+}
