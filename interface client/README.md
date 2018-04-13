@@ -1,10 +1,11 @@
 # FarmingBySat
 
-Pour lancer le serveur:<br/>
+Pour lancer le serveur : <br/>
 télécharger/clonez FarmingBySat2 sur votre ordinateur<br/>
-installez node.js sur votre ordinateur<br/>
-Placez vous dans le dossier nodeJS avec node app.js puis aller dans son navigateur: localhost:8080 pour aller à la page Web
-imageNDVITotal est le fichier python final, avec extraction + découpage. nous vous laissons ces derniers en cas d'exemples.
-La page html se situe dans Views, ne surtout pas la bouger, car le module express de Node Js est utilisé dans le serveur, pour permettre l'upload en temps réel sur ce dernier.
+installer node.js sur votre ordinateur<br/>
+Placer vous dans le dossier FarmingBySat2/interface client<br/>
+Lancer votre console/terminal à cet emplacement<br/>
+Lancer nodeJS en tapant "node app.js" dans votre console/terminal<br/>
+Aller dans votre navigateur: localhost:8080 pour aller à la page Web<br/>
+Vous êtes maintenant sur l'interface administrateur<br/>
 
-Et tout se passera bien!
