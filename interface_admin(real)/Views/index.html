@@ -1,7 +1,12 @@
-<!--    Ce fichier est le visuel du serveur, il contient les informations nécéssaire à l'admi por traiter la demande du client. Les informations sont récoltés par le script formular.js
-        et stockés dans une base de données pas encore mise en place
-        La mise en forme du formulaire est effectuée dans le fichier formulaire.css  -->
+
+
+<!--    Ce fichier est le visuel du serveur, il contient les informations nécéssaire pour traiter la demande du client. Les informations sont récoltés par le script formular.js et le script infoClient.js
+        Toutes les informations sont stockées dans une base de données 
+        La mise en forme du formulaire est effectuée dans le fichier formulaire.css et general.css  -->
+
+
 <head>
+
     <!-- Penser à placer le nom de la startup dans le title -->
     <title>Mon copain le satellite</title>
     <meta charset="utf-8"></meta>
@@ -31,7 +36,8 @@
 
 
 
-<!-- la première étape permet à l'administrateur de rentrer le mot de passe et de passer à la page suivante -->
+<!-- la première étape permet à l'administrateur de rentrer le mot de passe et  l'identifiant de l'administrateur. Ces informations sont stockés dans la base de données-->
+<!--Le javascript va lancer la fonction goSecondStep-->
 
 <div id="firstStep">
 <div class="connect_box"> <!--écran d'entrée du mot de passe (firstep)-->
@@ -40,10 +46,12 @@
         <input type="text" id="identifiant" placeholder="ID"><br/><br/>
          <input type="password" placeholder="Enter Password" id="password">
 		 <input type="button" value = "Go!" id="bouton1" onclick="goSecondStep()";> 
+         <!--Le javascript va lancer la fonction goSecondStep-->
 		 
 </div>
 </div>
 
+<!--L'étape deux permet de sélectionner le client en tapant son nom ou en choisissant dans la liste-->
 
 <div id="secondStep">
 
@@ -62,21 +70,23 @@
 
         <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau();baseDeDonneesClient();"
                  id="nouveauClientButton"/>
+                 <!--Le javascript va lancer les fonctions-->
       </p>
 	</div>
 </div>
 
 
 
-<!-- en dessous 4e page-->
+<!-- en dessous 4e page
+Dans cette page il y atutes les informations concernant le client-->
 
 <div id=fourthStep>
 
 <h2>LE CLIENT</h2>
 <br/><br/>
 
-<!-- en haut à gauche de la page on affiche le nom et le prenom du client sélectionner
-le java script va se charger d'aller récupérer le bon client-->
+<!-- en haut de la page on affiche le nom et le prenom du client sélectionner
+le java script va se charger d'aller récupérer le nom du client-->
 
 
 <div id="AfficherNom"></div>
@@ -96,6 +106,7 @@ le java script va se charger d'aller récupérer le bon client-->
 <div id="renseignementClientPage1">
 
 <div id="informationsPersonnellesClient"><h2>Informations personnelles du client</h2>
+   
 
 <div id="nomClient">Nom : 
 </div><br/>
@@ -111,6 +122,7 @@ le java script va se charger d'aller récupérer le bon client-->
 
 <div id="informationsAgricolesClient">
     <h2>Informations agricoles du client</h2>
+
 
 <h3>Parcelaire</h3><div id="parcelaireClient">
 
@@ -226,7 +238,7 @@ le java script va se charger d'aller récupérer le bon client-->
 <!---->
 <!--La partie pour trouver les plantes adaptées pour les couverts végétaux
 
-dans un premier temps l'administrateur choisit les entrées entre des valeurs possible-->
+dans un premier temps l'administrateur choisit la quantité d'azote, la quantité de carbone et la compaction entre les différentes valeurs possible-->
 <!---->
 <!---->
 <!---->
@@ -270,7 +282,7 @@ dans un premier temps l'administrateur choisit les entrées entre des valeurs po
             
             <option>Très Peu
             </option>
-        </select>
+        </select><br/>
 
 <label>Compaction  </label>
         <select id="compaction" >
@@ -292,7 +304,7 @@ dans un premier temps l'administrateur choisit les entrées entre des valeurs po
 
 
 <input type="button" value="valider" id="validerChoix" onclick="voirResultat();afficherResultat()"><input type="button" value="recommencer" id="recommencer" onclick="recommencer()">
-
+<!--Le javascript va lancer les fonctions-->
 
 </div>
 
@@ -302,12 +314,12 @@ dans un premier temps l'administrateur choisit les entrées entre des valeurs po
 <!---->
 <!---->
 <!--Ici la page de résultatmontrant les plantes à insérer -->
-<!---->
+<!--le javascript va créer les éléments avec les différents plantes à insérer-->
 <!---->
 <!---->
 
 
-<div id="resultat"> Le résultat pour chaque plante correspond au pourcentage de la quantité maximale de la plante
+<div id="resultat"> Le résultat pour chaque espèce correspond au pourcentage de la quantité maximale de l'espèce
 
 
    
@@ -379,7 +391,7 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
             <h2>Formulaire d'envoie de mail</h2>
             <br>
 
-            <!-- method= form action= "/email" permet d'envoyer les données à node.js grace à la fonction bodyparser
+            <!-- method= form action= "/email" permet d'envoyer les données à node.js grace au module bodyparser
             tous les élément à l'intérieur de form peuvent être récupérer du coté node.js -->
 
             <form class="form-vertical" role="form" method="post" action="/email">
@@ -415,7 +427,7 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
                     <div class="col-sm-10">
                         <button type="submit" class="btn btn-primary" id="envoyerButton" onclick="mettreClientBoutListe();
             faireLaListe()">Envoyer</button>
-
+                <!--Le javascript lance les fonction-->
                       
                     </div>
                 </div>
@@ -424,7 +436,8 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
             </form>
               <button type="submit" id="joindreButton" onclick="choisirFichier()">Joindre</button>
                 <input type="file" id="joindre"  name="uploads[]" onclick= "telechargerFichier()" >   
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+            <!--Le javascript lance les fonction--> 
         </div>
 
 

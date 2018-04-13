@@ -36,8 +36,7 @@ var nomClient;
 
 
 
-/*on récupère le mot de passe écrit par l'admi 
-grace à document.getElementById*/
+/*on récupère les éléments du HTML avec document.getElementByID('id'); */
 
 
 
@@ -47,7 +46,8 @@ la fonction est déclenché lorsque l'admi appuie sur le boutton OK
 à coté du block mot de passe
 .style.display= "block" permet d'afficher l'élément
 .style.display= "none" permet de cacher l'élément 
-il faut dans un premier temps les afficher ou les cacher dans le css */
+il faut dans un premier temps les afficher 
+pour cacher un élément par défaut dans le fichier code css:"" display:none" */
 
 function goSecondStep(){
 
@@ -144,7 +144,7 @@ function element4(){
 	}
 
 	/*permet de revenir sur la 3e page
- supprime tout les éléments effectuer sur la 4e page(pas encore fait)
+ supprime tout les éléments créés sur la 4e page(pas encore fait)
  la fonction se décleche en appuyant sur le boutton retour du html*/
 	
 
@@ -161,17 +161,18 @@ function retour(){
 
 
 /*function retour2 permet de revenir à la page4: 
-la page client lorsqu'on est à la page5: 
-la pag pour envoyer un mail au client*/
+*/
 
 function retour2(){
 	document.getElementById('fifthStep').style.display = "none";
 	document.getElementById('fourthStep').style.display= "block";
     document.getElementById('sendMail').style.display="block";
 	document.getElementById('pageCarte').style.display = "none";
+	document.getElementById('renseignementClientPage1').style.display = 'block';
 	document.getElementById('renseignementClientPage2').style.display = "none";
-
-  
+  	document.getElementById('informationsAgricolesClient').style.display="block";
+  	document.getElementById('informationsPersonnellesClient').style.display="block";
+  	document.getElementById('retour').style.display="block";
 		
 
 
@@ -194,24 +195,13 @@ function retour2(){
 
 	
 
-/*toujours lors du click sur le bouton ok de la 3e page, 
-la fonction affiche un lien avec le document correspondant au client en question
-pour faire cela on crée un élément lien caractérisé par la borne <a>
-on lui donne un id et un href qui est le lien
-grace à la fonction appendChild on insère l'élément enfant (élément a)qu'on vient de créer
- dans un élément parent cad qui le recouvre
-  ici ça correspond à l'élément ayant id: elementDossier
-  ensuite pour que le lien marche il lui faut un support sur lequel l'admi devra apuyer pour le lancer
-  pour cela on crée du text avec la fonction document.createtextNode
-  on insère se text dans l'élément <a> grace à la fonction appendChild  */
 
 
 
 
 
 
-
-/*permet d télécharger la carte du client et de l'afficher sur la page
+/*permet de télécharger la carte du client et de l'afficher sur la page
  de plus elle insere un lien qui permet d'obtenir la carte en grand 
  si on click dessus et de revenir normal en appuyant ailleurs
  */
@@ -222,6 +212,18 @@ function lesCartesNouveau(){
 
 /*la première partie permet de créer un lien qui permettra d'agrandir la carte
 lorsqu'on apuyera sur "afficher en grand" */
+
+
+/*Pour créer un lien en javascrit:  
+1. on crée un élément lien caractérisé par la borne <a> avec document.createElement(element)
+2. on lui donne un id : element.id='nom id'
+3. on lui donne son href (l'adresse du lien) : element.href='direction du lien'
+4. on utilise appendChild pour insère l'élément enfant (élément a)qu'on vient de créer
+ dans son élément parent (l'élément qui le recouvre)
+5. on crée le text avec document.createtextNode('text') ce sera le text sur lequel on appuie pour déclencher le lien
+6. on insère se text dans l'élément <a> grace à la fonction appendChild  */
+
+
 	nouveauLien = document.createElement('a');
 	nouveauLien.id='nouveauLien';
 	nouveauLien.href = 'afficherCarte';
@@ -242,8 +244,9 @@ dans le css on limite la taille de la carte pour qu'elle reste petite
 	document.getElementById('carte2').appendChild(lienCarte);
 
 
-/*ici on crée la fonction click qui va s'actier en cliquant sur "afficher la carte" l'activation de
-cette fonction va actier la fonction displayImg()*/
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
 
 nouveauLien.addEventListener('click', function(e){
 e.preventDefault();
@@ -251,7 +254,7 @@ displayImg(e.currentTarget);
 
 });
 
-/*la fonction displayImg permet de charger la carte grace à la l'outil load */
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
 
 function displayImg(lien){
 	 img=new Image();
@@ -314,7 +317,8 @@ function choisirFichier(){
 /**/
 /**/
 /* fonction pour permet de télécharger le ficher choisi par 
-l'admi et de le placer dans le dossier'farmingData*/
+l'admi et de le placer dans le dossier'farmingData
+On utilise une fonction ajax, fonction toute faite*/
 /**/
 /**/
 
@@ -375,7 +379,7 @@ function telechargerFichier(){
 /**/
 /*fonction qui créer la liste déroulante des client 
 en se servant du table listeClient
-cela permet à l'administrateur de choisir le client qu'il souhaite*/
+cela permet à l'administrateur de choisir le client qu'il souhaite dans la liste*/
 /**/
 /**/
 
@@ -406,8 +410,13 @@ cela permet à l'administrateur de choisir le client qu'il souhaite*/
 
 /**/
 /**/
-/*fonction qui supprime le client de la liste
- et le rajoute en fin de la liste*/
+/*fonction qui supprime le client du tableau
+ et le rajoute au bout du tableau. Le tableau est présent dans le javascript,
+ dans le html c'est une liste déroulante. 
+ Il faudra ensuite actualiser la liste déroulante ce qui se fait automatiquement losqu'on recharge la page
+ 1.on récupère son nom nom dans la liste en faisant une boucle
+ 2.on le supprime de la liste en utilisant la fonction  tableau.splice('indice', nombre d'élément à supprimer)
+ 3. on l'ajoute de nouveau en bas de la liste en utilisant la fonction tableau.push('element')*/
 /**/
 /**/
 
@@ -435,8 +444,7 @@ function mettreClientBoutListe(){
 
 /**/
 /**/
-/*fonction qui supprime le client de la liste déroulante 
-et le remet en bas de cette liste*/
+/*fonction qui supprime le client de la liste déroulante.Permet d'actualiser la liste déroulante */
 /**/
 /**/
 
@@ -458,7 +466,7 @@ function supprimerLaListe(){
 /**/
 /**/
 /**/
-/*fonction qui montre les résultats */
+/*fonction qui montre le block résultat*/
 /**/
 /**/
 /**/
@@ -473,7 +481,9 @@ function voirResultat(){
 
 /**/
 /**/
-/*fonction pour supprimer le resultat*/
+/*fonction pour supprimer le resultat
+on utilise la fonction remveChild
+marche uniquement pour enlever un élément enfant d'un élément parent*/
 /**/
 /**/
 
@@ -509,11 +519,31 @@ function recommencer(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**/
 /**/
 /*fonction qui affiche les resultat sur la page
 de résultat
-il faut créer tous les cas possibles*/
+il faut créer tous les cas possibles 
+il y a 75 cas différent, 75 fonction if{}*/
 /**/
 /**/
 

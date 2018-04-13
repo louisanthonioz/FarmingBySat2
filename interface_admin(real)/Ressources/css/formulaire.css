@@ -1,8 +1,8 @@
 /*  MISE EN FORME DU FORMULAIRE DE DONNEES 
     Les différentes étapes sont indépendantes, elles suivent la nomenclature du index.html
-    Il y a aussi une partie Checkbox, qui permet la mise en forme des cases à cocher,
-    une partie liste déroulante, qui permet la mise en forme des listes déroulantes
-    et enfin une partie RESPONSIVE, qui gère la mise en forme pour mobile et tablette */
+    
+    Pour adapter l'image aux différentes taille d'image utilisé vh et vw pour les positions
+    ces unités correspondent à un % de la taille de l'écran*/
 
 .imgadmin3
 {
@@ -405,6 +405,7 @@ option[value=""][disabled] {
     box-shadow: 0 0 16px grey;    
     margin-top: 10vh;
     margin-left: 2vw;
+    text-align: center;
 
    
    
@@ -415,6 +416,7 @@ option[value=""][disabled] {
 #renseignementClientPage2
 {
     display: none;
+    text-align: center;
 }
 
 #retour3
@@ -444,8 +446,25 @@ option[value=""][disabled] {
 #remarqueDuCient
 
 {
-    float: right;
+   display: inline-block;
 }
+
+#nomClient,#prenomClient,#adresseMailClient,#telephoneClient
+,#rueClient,#codePostalClient,#villeClient,#nombreHectareClient,#nombreParcelleClient,#situationParcelleClient,
+#declarationPACClient,#culturePrecedenteClient,
+#cultureSuivanteClient,#dateRecolteClient,
+#planFumureClient,#cartographieFertilisationClient,#cartographieRendementClient,
+#leRendementClient,#problemeParcelleClient,
+#modeDestructionClient,#typeSemoirClient,
+#analyseSolClient,#reliquatsHiverClient,
+#remarqueCient
+{
+    
+
+   
+    }
+
+
 
 #pageCarte
 {
@@ -498,6 +517,12 @@ option[value=""][disabled] {
     width: 15vw;
 }
 
+#compaction
+{
+    margin-top: 3vh;
+}
+
+
 #validerChoix
 {
     background : none;
@@ -542,4 +567,9 @@ option[value=""][disabled] {
     width: 15vw;
     margin-top: 1vh;
 
+}
+
+#encadrerText
+{
+    text-align: center;
 }

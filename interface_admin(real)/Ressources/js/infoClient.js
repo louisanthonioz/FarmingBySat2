@@ -121,7 +121,7 @@ function baseDeDonneesClient(){
 
 	nomClientParent.appendChild(nomDuClient);
 
-	var nomClientText = document.createTextNode("ici on appelle le nom du client");
+	var nomClientText = document.createTextNode("du client");
 	nomDuClient.appendChild(nomClientText);
 
 			/*on crée le prénom*/

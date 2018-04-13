@@ -1,6 +1,6 @@
 // Necessary modules for server
 var http = require('http');
-var fs = require('fs');
+var fs = require('fs'); 
 var path = require('path');
 var express = require('express');
 var formidable = require('formidable');
@@ -30,7 +30,8 @@ app.get('/', function(req, res,next) {
 
 /**/
 /**/
-/* connection avec le javascript*/
+/* connection avec le javascript
+on utilise le module socket.io*/
  /**/
  /**/
 
@@ -93,8 +94,9 @@ sur 'envoyer'*/
 /*bodyParser nous sert à récupérer les informations de la page html grace à 
 la fonction function(req, res, next)*/
 
-/*pour l'instant il faut désactiver son antivirus pour que ça marche*/
-/**/
+/*pour l'instant il faut désactiver son antivirus pour que ça marche
+il faut une adresse mail gmail*/
+/*bodyparser permet de récuérer les éléments du html*/
 /**/
 
 
@@ -145,8 +147,10 @@ app.post('/email', function(req, res, next) {
 var attachments =[{ filename: 'BilanParcelles.pdf', path: './Ressources/farmingData/BilanParcelles.pdf', contentType:'aplication/pdf' }];
           
 
-/*fonction pour récupérer le fichier télécharger
-on le met dans le fichier farmingData*/
+
+
+/*fonction pour récupérer le fichier joint
+on l'insère dans le dossier farmingData*/
 // Event to handle uploads files
 
 app.post('/upload', function(req, res){
