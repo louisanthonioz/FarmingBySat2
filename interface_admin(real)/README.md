@@ -10,7 +10,7 @@ Aller dans votre navigateur: localhost:8080 pour aller à la page Web<br/>
 Vous êtes maintenant sur l'interface administrateur<br/><br/><br/>
 
 
-Ci-dessous, explications des sous-dossiers et des applications
+Ci-dessous, explications des sous-dossiers et des applications<br/>
 app.js : <br/> 
 Il contient tout le code du server.<br/>
 C'est lui qui dirige et controle l'inteface<br/><br/>
