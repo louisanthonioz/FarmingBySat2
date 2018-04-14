@@ -588,7 +588,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 100%");
+	var plante1Text = document.createTextNode("Avoine : 57%");
 	plante1.appendChild(plante1Text);
 
 
@@ -602,7 +602,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 42%");
 	plante2.appendChild(plante2Text);
 
 
@@ -639,7 +639,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 100%");
+	var plante1Text = document.createTextNode("Avoine : 66%");
 	plante1.appendChild(plante1Text);
 
 
@@ -653,7 +653,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -691,7 +691,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 100%");
+	var plante1Text = document.createTextNode("Avoine : 66%");
 	plante1.appendChild(plante1Text);
 
 
@@ -705,7 +705,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -744,7 +744,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 100%");
+	var plante1Text = document.createTextNode("Avoine : 57%");
 	plante1.appendChild(plante1Text);
 
 
@@ -758,7 +758,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 42%");
 	plante2.appendChild(plante2Text);
 
 
@@ -796,7 +796,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 100%");
+	var plante1Text = document.createTextNode("Avoine : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -810,7 +810,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -849,7 +849,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 75%");
+	var plante1Text = document.createTextNode("Avoine : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -863,7 +863,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -900,7 +900,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 75%");
+	var plante1Text = document.createTextNode("Avoine : 60%");
 	plante1.appendChild(plante1Text);
 
 
@@ -914,7 +914,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 40%");
 	plante2.appendChild(plante2Text);
 
 
@@ -952,7 +952,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 75%");
+	var plante1Text = document.createTextNode("Avoine : 60%");
 	plante1.appendChild(plante1Text);
 
 
@@ -966,7 +966,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 40%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1004,7 +1004,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 75%");
+	var plante1Text = document.createTextNode("Avoine : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1018,7 +1018,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1056,7 +1056,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 75%");
+	var plante1Text = document.createTextNode("Avoine : 42%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1070,7 +1070,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 57%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1265,7 +1265,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 50%");
+	var plante1Text = document.createTextNode("Avoine : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1279,7 +1279,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1317,7 +1317,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 50%");
+	var plante1Text = document.createTextNode("Avoine : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1331,7 +1331,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1369,7 +1369,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 50%");
+	var plante1Text = document.createTextNode("Avoine : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1383,7 +1383,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1525,7 +1525,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 50%");
+	var plante1Text = document.createTextNode("Avoine : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1539,7 +1539,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1577,7 +1577,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 50%");
+	var plante1Text = document.createTextNode("Avoine : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1591,7 +1591,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1681,7 +1681,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 25%");
+	var plante1Text = document.createTextNode("Avoine : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1695,7 +1695,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1733,7 +1733,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 25%");
+	var plante1Text = document.createTextNode("Avoine : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1747,7 +1747,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1785,7 +1785,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 25%");
+	var plante1Text = document.createTextNode("Avoine : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1799,7 +1799,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 78%");
 	plante2.appendChild(plante2Text);
 
 
@@ -1838,7 +1838,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Avoine : 25%");
+	var plante1Text = document.createTextNode("Avoine : 20%");
 	plante1.appendChild(plante1Text);
 
 
@@ -1852,7 +1852,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 80%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2007,7 +2007,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 100%");
+	var plante1Text = document.createTextNode("Radis : 66%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2021,7 +2021,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2060,7 +2060,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 100%");
+	var plante1Text = document.createTextNode("Radis : 57%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2074,7 +2074,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 42%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2113,7 +2113,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 100%");
+	var plante1Text = document.createTextNode("Radis : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2127,7 +2127,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100");
+	var plante2Text = document.createTextNode("lentille : 50");
 	plante2.appendChild(plante2Text);
 
 
@@ -2219,7 +2219,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Moutarde Blanche : 75%");
+	var plante1Text = document.createTextNode("Moutarde Blanche : 100%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2272,7 +2272,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 75%");
+	var plante1Text = document.createTextNode("Radis : 60%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2286,7 +2286,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 40%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2325,7 +2325,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 75%");
+	var plante1Text = document.createTextNode("Radis : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2339,7 +2339,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2377,7 +2377,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 75%");
+	var plante1Text = document.createTextNode("Radis : 42%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2391,7 +2391,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 42%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2429,7 +2429,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2443,7 +2443,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 100%");
+	var plante2Text = document.createTextNode("Navette : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2480,7 +2480,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2494,7 +2494,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2582,7 +2582,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2596,7 +2596,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2633,7 +2633,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2647,7 +2647,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2684,7 +2684,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2698,7 +2698,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 100%");
+	var plante2Text = document.createTextNode("Navette : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2736,7 +2736,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2750,7 +2750,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2840,7 +2840,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2854,7 +2854,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2892,7 +2892,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2906,7 +2906,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -2944,7 +2944,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 25%");
+	var plante1Text = document.createTextNode("Radis : 20%");
 	plante1.appendChild(plante1Text);
 
 
@@ -2958,7 +2958,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 100%");
+	var plante2Text = document.createTextNode("Navette : 80%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3149,7 +3149,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 25%");
+	var plante1Text = document.createTextNode("Radis : 20%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3163,7 +3163,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 80%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3213,7 +3213,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3227,7 +3227,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3241,7 +3241,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 100%");
+	var plante3Text = document.createTextNode("Navette : 66%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3264,7 +3264,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3278,7 +3278,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 28%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3292,7 +3292,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 75%");
+	var plante3Text = document.createTextNode("Navette : 42%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3367,7 +3367,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3381,7 +3381,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 40%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3395,7 +3395,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Févérole : 25%");
+	var plante3Text = document.createTextNode("Févérole : 20%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3418,7 +3418,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3432,7 +3432,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3446,7 +3446,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Févérole : 50%");
+	var plante3Text = document.createTextNode("Févérole : 33%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3469,7 +3469,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3483,7 +3483,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 14%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3497,7 +3497,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 100%");
+	var plante3Text = document.createTextNode("Navette : 57%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3520,7 +3520,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3534,7 +3534,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 16%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3548,7 +3548,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 75%");
+	var plante3Text = document.createTextNode("Navette : 50%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3622,7 +3622,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3636,7 +3636,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 250");
 	plante2.appendChild(plante2Text);
 
 
@@ -3650,7 +3650,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Févérole : 50%");
+	var plante3Text = document.createTextNode("Févérole : 40%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3673,7 +3673,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3687,7 +3687,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 16%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3701,7 +3701,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Févérole : 100%");
+	var plante3Text = document.createTextNode("Févérole : 50%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -3724,7 +3724,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3738,7 +3738,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3880,7 +3880,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3894,7 +3894,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 75%");
+	var plante2Text = document.createTextNode("Févérole : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3932,7 +3932,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 50%");
+	var plante1Text = document.createTextNode("Radis : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3946,7 +3946,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 100%");
+	var plante2Text = document.createTextNode("Févérole : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -3984,7 +3984,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 30%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -3998,7 +3998,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4035,7 +4035,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 30%");
+	var plante1Text = document.createTextNode("Radis : 37%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4049,7 +4049,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 62%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4086,7 +4086,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 30%");
+	var plante1Text = document.createTextNode("Radis : 37%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4100,7 +4100,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 50%");
+	var plante2Text = document.createTextNode("Févérole : 62%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4137,7 +4137,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 30%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4151,7 +4151,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 75%");
+	var plante2Text = document.createTextNode("Févérole : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4188,7 +4188,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 30%");
+	var plante1Text = document.createTextNode("Radis : 23%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4202,7 +4202,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 100%");
+	var plante2Text = document.createTextNode("Févérole : 76%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4239,7 +4239,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4253,7 +4253,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 78%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4291,7 +4291,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4305,7 +4305,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4343,7 +4343,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4357,7 +4357,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 50%");
+	var plante2Text = document.createTextNode("Févérole : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4395,7 +4395,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4409,7 +4409,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 75%");
+	var plante2Text = document.createTextNode("Févérole : 78%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4448,7 +4448,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4462,7 +4462,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Févérole : 100%");
+	var plante2Text = document.createTextNode("Févérole : 83%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4514,7 +4514,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 9%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4528,7 +4528,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 45%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4542,7 +4542,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 100%");
+	var plante3Text = document.createTextNode("Navette : 45%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -4565,7 +4565,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 10%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4579,7 +4579,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4593,7 +4593,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 75%");
+	var plante3Text = document.createTextNode("Navette : 38%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -4617,7 +4617,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 11%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4631,7 +4631,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 58%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4645,7 +4645,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 50%");
+	var plante3Text = document.createTextNode("Navette : 29%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -4668,7 +4668,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4682,7 +4682,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 83%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4719,7 +4719,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4733,7 +4733,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 83%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4770,7 +4770,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 10%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4784,7 +4784,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 38%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4798,7 +4798,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 100%");
+	var plante3Text = document.createTextNode("Navette : 51%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -4821,7 +4821,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 11%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4835,7 +4835,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 44%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4849,7 +4849,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 75%");
+	var plante3Text = document.createTextNode("Navette : 44%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -4872,7 +4872,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 13%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4886,7 +4886,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 51%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4900,7 +4900,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 50%");
+	var plante3Text = document.createTextNode("Navette : 34%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -4923,7 +4923,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4937,7 +4937,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 78%");
 	plante2.appendChild(plante2Text);
 
 
@@ -4974,7 +4974,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -4988,7 +4988,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 62%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5002,7 +5002,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("lentille: 25%");
+	var plante3Text = document.createTextNode("lentille: 16%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5025,7 +5025,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 13%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5039,7 +5039,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 38%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5053,7 +5053,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 75%");
+	var plante3Text = document.createTextNode("Navette : 51%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5076,7 +5076,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5090,7 +5090,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 41%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5104,7 +5104,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 50%");
+	var plante3Text = document.createTextNode("Navette : 41%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5127,7 +5127,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5141,7 +5141,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5179,7 +5179,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5193,7 +5193,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 52%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5207,7 +5207,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("lentille : 25%");
+	var plante3Text = document.createTextNode("lentille : 26%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5233,7 +5233,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5247,7 +5247,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 41%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5261,7 +5261,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("lentille : 50%");
+	var plante3Text = document.createTextNode("lentille : 41%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5285,7 +5285,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5299,7 +5299,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 20%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5313,7 +5313,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 75%");
+	var plante3Text = document.createTextNode("Navette : 62%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5336,7 +5336,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5350,7 +5350,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 26%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5364,7 +5364,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("Navette : 50%");
+	var plante3Text = document.createTextNode("Navette : 52%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5387,7 +5387,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5401,7 +5401,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 35%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5415,7 +5415,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("lentille : 25%");
+	var plante3Text = document.createTextNode("lentille : 35%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5438,7 +5438,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5452,7 +5452,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 26%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5466,7 +5466,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("lentille : 50%");
+	var plante3Text = document.createTextNode("lentille : 52%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5489,7 +5489,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5503,7 +5503,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante2Text = document.createTextNode("Trèfle incarnat : 20%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5517,7 +5517,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante3);
 
-	var plante3Text = document.createTextNode("lentille : 75%");
+	var plante3Text = document.createTextNode("lentille : 62%");
 	plante3.appendChild(plante3Text);
 
 	}
@@ -5540,7 +5540,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5554,7 +5554,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 78%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5591,7 +5591,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5605,7 +5605,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5642,7 +5642,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 28%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5656,7 +5656,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 71%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5693,7 +5693,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 21%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5707,7 +5707,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 75%");
+	var plante2Text = document.createTextNode("lentille : 78%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5745,7 +5745,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Radis : 20%");
+	var plante1Text = document.createTextNode("Radis : 16%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5759,7 +5759,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 100%");
+	var plante2Text = document.createTextNode("lentille : 83%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5807,7 +5807,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5821,7 +5821,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 100%");
+	var plante2Text = document.createTextNode("Navette : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5859,7 +5859,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 57%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5873,7 +5873,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 42%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5912,7 +5912,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 66%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5926,7 +5926,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -5964,7 +5964,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 80%");
 	plante1.appendChild(plante1Text);
 
 
@@ -5978,7 +5978,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 25%");
+	var plante2Text = document.createTextNode("Navette : 20%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6068,7 +6068,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 42%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6082,7 +6082,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 100%");
+	var plante2Text = document.createTextNode("Navette : 57%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6119,7 +6119,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 60%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6133,7 +6133,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 40%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6221,7 +6221,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 75%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6323,7 +6323,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 40%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6337,7 +6337,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 75%");
+	var plante2Text = document.createTextNode("Navette : 60%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6427,7 +6427,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 100%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6479,7 +6479,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 66%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6493,7 +6493,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 25%");
+	var plante2Text = document.createTextNode("lentille : 33%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6636,7 +6636,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6650,7 +6650,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("Navette : 50%");
+	var plante2Text = document.createTextNode("Navette : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6688,7 +6688,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 50%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6702,7 +6702,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 25%");
+	var plante2Text = document.createTextNode("lentille : 50%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6740,7 +6740,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Trèfle incarnat : 25%");
+	var plante1Text = document.createTextNode("Trèfle incarnat : 33%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6754,7 +6754,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante2);
 
-	var plante2Text = document.createTextNode("lentille : 50%");
+	var plante2Text = document.createTextNode("lentille : 66%");
 	plante2.appendChild(plante2Text);
 
 
@@ -6844,7 +6844,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Navette : 75%");
+	var plante1Text = document.createTextNode("Navette : 100%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6896,7 +6896,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("Navette : 50%");
+	var plante1Text = document.createTextNode("Navette : 100%");
 	plante1.appendChild(plante1Text);
 
 
@@ -6948,7 +6948,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("lentille : 50%");
+	var plante1Text = document.createTextNode("lentille : 100%");
 	plante1.appendChild(plante1Text);
 
 
@@ -7000,7 +7000,7 @@ function afficherResultat(){
 
 	resultat.appendChild(plante1);
 
-	var plante1Text = document.createTextNode("lentille : 75%");
+	var plante1Text = document.createTextNode("lentille : 100%");
 	plante1.appendChild(plante1Text);
 
 
