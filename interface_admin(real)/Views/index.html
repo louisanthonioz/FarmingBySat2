@@ -158,21 +158,32 @@ le java script va se charger d'aller récupérer le nom du client-->
 <div id="pageCarte">
 
 <p id="aligner">
+     <h2>les cartes</h2><br/><br/>
 
-<div id="cartes">
-    <a></a>la carte<br/>
-    <div id="carte2"></div><br/>
-</div>
+<div id="carteNDVI"></div><br/>
+<div id="carteMCARI"></div><br/>
+<div id="carteMTVI2"></div><br/>
+<div id="carteBI"></div><br/>
+<div id="carteGI"></div><br/>
+<div id="carteWI"></div><br/>
+<div id="carteVTCI"></div><br/>
+<div id="carteDEM"></div><br/>
+<div id="carteCTI"></div><br/>
+  
+
 <!--id: overlay est utiliser pour afficher la carte en grand, le javascript gère cela -->
-
 <div id="overlay"></div>
+
 </p>
 
 <div id="retourPage">
     <input type="button" value="retour" id="retourPageCarte" 
-    onclick="retour3()"> fiche client
+    onclick="retourCarte()"> fiche client
 
-</div>
+</div><br/><br/>
+
+
+
 </div>
 
 
@@ -352,7 +363,7 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
 
 <div id="retour">
     <input type="button" value="retour" 
-    onclick="retour();element4();" 
+    onclick="retour();element4();supprimerCartesClient()" 
     id = "retourButton"/>à la liste des clients
     </div>
 

@@ -147,44 +147,7 @@ option[value=""][disabled] {
 }
 
 
- #ouvrirAncienButton, #ouvrirNouveauButton
- {
-    display: inline-block;
-    position: relative;
-    margin-left: 30px;
-    background : none;
-    font-size: 2vh;
-    border-radius: 1vh;
-    height: 6vh;
-    width: 10vh;
- }
-
-#ouvrirAncien
-{
-    position: relative;
-    margin-right:20px;
-}
-
-#ouvrirNouveau
-{
-    position: relative;
-    margin-right: 40px;
-    
-}
-
-#listeAncien
-{
-    position: relative;
-    margin-left: 50px;
-}
-
-#listeNouveau
-{
-    position: relative;
-    margin-left: 30px;
-}
-
-
+ 
 
 /**/
 /**/
@@ -255,15 +218,6 @@ option[value=""][disabled] {
      
  }
 
-#cartes
-{
-    float: right;
-}
-   
-    
-
-
-
 
 
 #afficherNom
@@ -282,16 +236,18 @@ option[value=""][disabled] {
 }
 
 
-#lienCarte
+#lienCarteNDVI, #lienCarteMCARI, #lienCarteVTCI, #lienCarteMTVI2,
+#lienCarteBI, #lienCarteGI, #lienCarteWI, #lienCarteDEM,#lienCarteCTI
 {
     position: relative;
-    max-width: 250px;
-    max-height: 300px;
+    max-width: 25vw;
+    max-height: 25vh;
    
 }
 
 
-#overlay {
+#overlay
+{
     display : none; /* Par défaut, on cache l'overlay */
     position: absolute;
     top: 0; 
@@ -304,11 +260,19 @@ option[value=""][disabled] {
     background-color: rgba(0,0,0,0.6);
 }
 
-#overlay img {
-    margin-top: 100px;
+#overlay img
+{
+    margin-top: 25vw;
+    width: auto;
+    height: 80vh ;
+
+   
+
 }
 
-#nouveauLien
+#nouveauLienNDVI, #nouveauLienMCARI, #nouveauLienMTVI2,
+#nouveauLienBI,#nouveauLienGI,#nouveauLienWI,#nouveauLienVTCI,
+#nouveauLienDEM,#nouveauLienCTI
 {
             
     float: right;
@@ -465,19 +429,19 @@ option[value=""][disabled] {
     }
 
 
-
 #pageCarte
 {
     display: none;
     padding: 2vw;
     border-radius: 5vw;
     width:60vw;
-    height: 35vh;
+    min-height : 40vh;
     background-color: rgba(255,255,255,0.8);
     box-shadow: 0 0 16px grey;    
     margin-left: 2vw;
     margin-top: 5vh;
 }
+
 
 #renseignementClientPage2
 {

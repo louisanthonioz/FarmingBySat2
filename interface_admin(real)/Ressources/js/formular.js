@@ -18,11 +18,7 @@ var parentCarte;
 var carte2Enfant;
 var parentCarte2;
 
-var nouveauLien;
-var nouveauLienText;
-var lienCarte;
-var img;
-var overlay;
+
 
 var joindre;
 
@@ -128,15 +124,6 @@ function element4(){
 		parentNom = document.getElementById('AfficherNom');
 		parentNom.removeChild(nomEnfant);
 
-	
-		carteEnfant= document.getElementById('nouveauLien');
-		parentCarte = document.getElementById('cartes');
-		parentCarte.removeChild(carteEnfant);	
-
-		carte2Enfant= document.getElementById('lienCarte');
-		parentCarte2 = document.getElementById('carte2');
-		parentCarte2.removeChild(carte2Enfant);		
-		
 		
 		alert('Les éléments de la page ont été supprimé');
 	
@@ -183,6 +170,21 @@ function retour2(){
 
 }
 
+function retourCarte(){
+
+	document.getElementById('fourthStep').style.display= "block";
+    document.getElementById('sendMail').style.display="block";
+	document.getElementById('pageCarte').style.display = "none";
+	document.getElementById('renseignementClientPage1').style.display = 'block';
+	document.getElementById('renseignementClientPage2').style.display = "none";
+  	document.getElementById('informationsAgricolesClient').style.display="block";
+  	document.getElementById('informationsPersonnellesClient').style.display="block";
+  	document.getElementById('retour').style.display="block";
+		
+
+
+}
+
 	function element5(){
 
   /*fonction pour suppprimer les éléments de la page 5:
@@ -194,8 +196,6 @@ function retour2(){
 	}
 
 	
-
-
 
 
 
@@ -223,32 +223,84 @@ lorsqu'on apuyera sur "afficher en grand" */
 5. on crée le text avec document.createtextNode('text') ce sera le text sur lequel on appuie pour déclencher le lien
 6. on insère se text dans l'élément <a> grace à la fonction appendChild  */
 
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+	
+	alert(nouveauClient);
 
-	nouveauLien = document.createElement('a');
-	nouveauLien.id='nouveauLien';
-	nouveauLien.href = 'afficherCarte';
-	document.getElementById('cartes').appendChild(nouveauLien);
+	carteClientNDVI();
+	carteClientMCARI();
+	carteClientMTVI2();
+	carteClientBI();
+	carteClientGI();
+	carteClientWI();
+	carteClientVTCI();
+	carteClientDEM();
+	carteClientCTI();
 
-	nouveauLienText = document.createTextNode("afficher en grand");
-	nouveauLien.appendChild(nouveauLienText);
+}
+/**/
+/**/
+/**/
+/*on insère la carte NDVI */
+/**/
+/**/
+/**/
 
-/*la deuxième partie permet d'afficher la carte sur la page
-dans le css on limite la taille de la carte pour qu'elle reste petite
+function carteClientNDVI(){
+/*on crée le nom de la carte : client_indice*/
+	var nouveauTextNDVI = document.createElement('p');
+	nouveauTextNDVI.id='nouveauTextNDVI';
+	document.getElementById('carteNDVI').appendChild(nouveauTextNDVI);
+
+	var nouveauTextTextNDVI = document.createTextNode(nouveauClient+'_NDVI');
+	nouveauTextNDVI.appendChild(nouveauTextTextNDVI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienNDVI = document.createElement('a');
+	nouveauLienNDVI.id='nouveauLienNDVI';
+	nouveauLienNDVI.href = 'afficherCarteNDVI';
+	document.getElementById('carteNDVI').appendChild(nouveauLienNDVI);
+
+	var nouveauLienTextNDVI = document.createTextNode("afficher en grand");
+	nouveauLienNDVI.appendChild(nouveauLienTextNDVI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
 */
+/**/
+/**/
+/**/
 
-	lienCarte= document.createElement('img');
-	lienCarte.id='lienCarte';
-	lienCarte.class='imgCarte';
-	lienCarte.src ='liste_clients_nouveaux/anthonioz_louis/maps2.png';
+	var lienCarteNDVI= document.createElement('img');
+	lienCarteNDVI.id='lienCarteNDVI';
+	lienCarteNDVI.class='imgCarte';
+	lienCarteNDVI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_NDVI.jpg';
 
-	document.getElementById('carte2').appendChild(lienCarte);
+	document.getElementById('carteNDVI').appendChild(lienCarteNDVI);
 
 
 /*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
 cette fonction va actier la fonction displayImg()
 c'est une fonction toute faite*/
 
-nouveauLien.addEventListener('click', function(e){
+nouveauLienNDVI.addEventListener('click', function(e){
 e.preventDefault();
 displayImg(e.currentTarget);
 
@@ -257,8 +309,8 @@ displayImg(e.currentTarget);
 /*la fonction displayImg permet de charger la carte grace à l'outil load */
 
 function displayImg(lien){
-	 img=new Image();
-	overlay = document.getElementById('overlay');
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
 
 	  img.addEventListener('load', function() {
         overlay.innerHTML = '';
@@ -266,7 +318,7 @@ function displayImg(lien){
     });
 
 
-    img.src = lienCarte.src;
+    img.src = lienCarteNDVI.src;
     overlay.style.display = 'block';
     overlay.innerHTML = '<span>Chargement en cours...</span>';
 
@@ -278,6 +330,854 @@ document.getElementById('overlay').addEventListener('click', function(e) {
 });
 }
 	
+
+/**/
+/**/
+/**/
+
+/**/
+/**/
+/**/
+/*on insère la carte MCARI*/
+/**/
+/**/
+/**/
+
+
+function carteClientMCARI(){
+
+	/*on crée le nom de la carte : client_indice*/
+
+	var nouveauTextMCARI = document.createElement('p');
+	nouveauTextMCARI.id='nouveauTextMCARI';
+	document.getElementById('carteMCARI').appendChild(nouveauTextMCARI);
+
+	var nouveauTextTextMCARI = document.createTextNode(nouveauClient+'_MCARI');
+	nouveauTextMCARI.appendChild(nouveauTextTextMCARI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienMCARI = document.createElement('a');
+	nouveauLienMCARI.id='nouveauLienMCARI';
+	nouveauLienMCARI.href = 'afficherCarteMCARI';
+	document.getElementById('carteMCARI').appendChild(nouveauLienMCARI);
+
+	var nouveauLienTextMCARI = document.createTextNode("afficher en grand");
+	nouveauLienMCARI.appendChild(nouveauLienTextMCARI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteMCARI= document.createElement('img');
+	lienCarteMCARI.id='lienCarteMCARI';
+	lienCarteMCARI.class='imgCarte';
+	lienCarteMCARI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_MCARI.jpg';
+
+	document.getElementById('carteMCARI').appendChild(lienCarteMCARI);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienMCARI.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteMCARI.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+
+
+
+
+/**/
+/**/
+/**/
+/* on insère la carte MTVI2*/
+/**/
+/**/
+
+
+function carteClientMTVI2(){}
+	
+
+	function carteClientMTVI2(){
+/*on crée le nom de la carte : client_indice*/
+	var nouveauTextMTVI2 = document.createElement('p');
+	nouveauTextMTVI2.id='nouveauTextMTVI2';
+	document.getElementById('carteMTVI2').appendChild(nouveauTextMTVI2);
+
+	var nouveauTextTextMTVI2 = document.createTextNode(nouveauClient+'_MTVI2');
+	nouveauTextMTVI2.appendChild(nouveauTextTextMTVI2);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienMTVI2 = document.createElement('a');
+	nouveauLienMTVI2.id='nouveauLienMTVI2';
+	nouveauLienMTVI2.href = 'afficherCarteMTVI2';
+	document.getElementById('carteMTVI2').appendChild(nouveauLienMTVI2);
+
+	var nouveauLienTextMTVI2 = document.createTextNode("afficher en grand");
+	nouveauLienMTVI2.appendChild(nouveauLienTextMTVI2);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteMTVI2= document.createElement('img');
+	lienCarteMTVI2.id='lienCarteMTVI2';
+	lienCarteMTVI2.class='imgCarte';
+	lienCarteMTVI2.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_MTVI2.jpg';
+
+	document.getElementById('carteMTVI2').appendChild(lienCarteMTVI2);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienMTVI2.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteMTVI2.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+/**/
+/**/
+/*on insère la carte BI*/
+/**/
+/**/
+
+
+function carteClientBI()
+{
+	/*on crée le nom de la carte : client_indice*/
+	var nouveauTextBI = document.createElement('p');
+	nouveauTextBI.id='nouveauTextBI';
+	document.getElementById('carteBI').appendChild(nouveauTextBI);
+
+	var nouveauTextTextBI = document.createTextNode(nouveauClient+'_BI');
+	nouveauTextBI.appendChild(nouveauTextTextBI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienBI = document.createElement('a');
+	nouveauLienBI.id='nouveauLienBI';
+	nouveauLienBI.href = 'afficherCarteBI';
+	document.getElementById('carteBI').appendChild(nouveauLienBI);
+
+	var nouveauLienTextBI = document.createTextNode("afficher en grand");
+	nouveauLienBI.appendChild(nouveauLienTextBI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteBI= document.createElement('img');
+	lienCarteBI.id='lienCarteBI';
+	lienCarteBI.class='imgCarte';
+	lienCarteBI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_BI.jpg';
+
+	document.getElementById('carteBI').appendChild(lienCarteBI);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienBI.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteBI.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+
+
+/**/
+/**/
+
+/**/
+/**/
+/*on insère carteClientGI()*/
+/**/
+/**/
+
+
+function carteClientGI(){
+
+	/*on crée le nom de la carte : client_indice*/
+	var nouveauTextGI = document.createElement('p');
+	nouveauTextGI.id='nouveauTextGI';
+	document.getElementById('carteGI').appendChild(nouveauTextGI);
+
+	var nouveauTextTextGI = document.createTextNode(nouveauClient+'_GI');
+	nouveauTextGI.appendChild(nouveauTextTextGI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienGI = document.createElement('a');
+	nouveauLienGI.id='nouveauLienGI';
+	nouveauLienGI.href = 'afficherCarteGI';
+	document.getElementById('carteGI').appendChild(nouveauLienGI);
+
+	var nouveauLienTextGI = document.createTextNode("afficher en grand");
+	nouveauLienGI.appendChild(nouveauLienTextGI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteGI= document.createElement('img');
+	lienCarteGI.id='lienCarteGI';
+	lienCarteGI.class='imgCarte';
+	lienCarteGI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_GI.jpg';
+
+	document.getElementById('carteGI').appendChild(lienCarteGI);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienGI.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteGI.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+
+
+
+
+/**/
+/**/
+/*on insère carteClientWI()*/
+/**/
+/**/
+
+
+function carteClientWI(){
+
+	/*on crée le nom de la carte : client_indice*/
+	var nouveauTextWI = document.createElement('p');
+	nouveauTextWI.id='nouveauTextWI';
+	document.getElementById('carteWI').appendChild(nouveauTextWI);
+
+	var nouveauTextTextWI = document.createTextNode(nouveauClient+'_WI');
+	nouveauTextWI.appendChild(nouveauTextTextWI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienWI = document.createElement('a');
+	nouveauLienWI.id='nouveauLienWI';
+	nouveauLienWI.href = 'afficherCarteWI';
+	document.getElementById('carteWI').appendChild(nouveauLienWI);
+
+	var nouveauLienTextWI = document.createTextNode("afficher en grand");
+	nouveauLienWI.appendChild(nouveauLienTextWI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteWI= document.createElement('img');
+	lienCarteWI.id='lienCarteWI';
+	lienCarteWI.class='imgCarte';
+	lienCarteWI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_WI.jpg';
+
+	document.getElementById('carteWI').appendChild(lienCarteWI);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienWI.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteWI.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+
+
+
+/**/
+/**/
+
+/**/
+/*on insère carteClientVTCI()*/
+/**/
+/**/
+
+
+function carteClientVTCI(){
+
+	/*on crée le nom de la carte : client_indice*/
+	var nouveauTextVTCI = document.createElement('p');
+	nouveauTextVTCI.id='nouveauTextVTCI';
+	document.getElementById('carteVTCI').appendChild(nouveauTextVTCI);
+
+	var nouveauTextTextVTCI = document.createTextNode(nouveauClient+'_VTCI');
+	nouveauTextVTCI.appendChild(nouveauTextTextVTCI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienVTCI = document.createElement('a');
+	nouveauLienVTCI.id='nouveauLienVTCI';
+	nouveauLienVTCI.href = 'afficherCarteVTCI';
+	document.getElementById('carteVTCI').appendChild(nouveauLienVTCI);
+
+	var nouveauLienTextVTCI = document.createTextNode("afficher en grand");
+	nouveauLienVTCI.appendChild(nouveauLienTextVTCI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteVTCI= document.createElement('img');
+	lienCarteVTCI.id='lienCarteVTCI';
+	lienCarteVTCI.class='imgCarte';
+	lienCarteVTCI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_VTCI.jpg';
+
+	document.getElementById('carteVTCI').appendChild(lienCarteVTCI);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienVTCI.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteVTCI.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+
+
+/**/
+/**/
+
+
+
+
+/**/
+/**/
+/*on insère carteClientDEM()*/
+/**/
+/**/
+
+
+function carteClientDEM(){
+
+	/*on crée le nom de la carte : client_indice*/
+	var nouveauTextDEM = document.createElement('p');
+	nouveauTextDEM.id='nouveauTextDEM';
+	document.getElementById('carteDEM').appendChild(nouveauTextDEM);
+
+	var nouveauTextTextDEM = document.createTextNode(nouveauClient+'_DEM');
+	nouveauTextDEM.appendChild(nouveauTextTextDEM);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienDEM = document.createElement('a');
+	nouveauLienDEM.id='nouveauLienDEM';
+	nouveauLienDEM.href = 'afficherCarteDEM';
+	document.getElementById('carteDEM').appendChild(nouveauLienDEM);
+
+	var nouveauLienTextDEM = document.createTextNode("afficher en grand");
+	nouveauLienDEM.appendChild(nouveauLienTextDEM);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteDEM= document.createElement('img');
+	lienCarteDEM.id='lienCarteDEM';
+	lienCarteDEM.class='imgCarte';
+	lienCarteDEM.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_DEM.jpg';
+
+	document.getElementById('carteDEM').appendChild(lienCarteDEM);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienDEM.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteDEM.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+
+
+/**/
+/**/
+
+
+
+
+
+/**/
+/**/
+/*on insère carteClientCTI()*/
+/**/
+/**/
+
+
+function carteClientCTI(){
+
+
+/*on crée le nom de la carte : client_indice*/
+	var nouveauTextCTI = document.createElement('p');
+	nouveauTextCTI.id='nouveauTextCTI';
+	document.getElementById('carteCTI').appendChild(nouveauTextCTI);
+
+	var nouveauTextTextCTI = document.createTextNode(nouveauClient+'_CTI');
+	nouveauTextCTI.appendChild(nouveauTextTextCTI);
+
+/**/
+/**/
+/**/
+/*on crée le lien pour grandir la carte*/
+/**/
+/**/
+/**/
+	var nouveauLienCTI = document.createElement('a');
+	nouveauLienCTI.id='nouveauLienCTI';
+	nouveauLienCTI.href = 'afficherCarteCTI';
+	document.getElementById('carteCTI').appendChild(nouveauLienCTI);
+
+	var nouveauLienTextCTI = document.createTextNode("afficher en grand");
+	nouveauLienCTI.appendChild(nouveauLienTextCTI);
+
+/**/
+/**/
+/**/
+/* permet d'afficher la carte sur la page dans le css 
+on limite la taille de la carte pour qu'elle reste petite
+*/
+/**/
+/**/
+/**/
+
+	var lienCarteCTI= document.createElement('img');
+	lienCarteCTI.id='lienCarteCTI';
+	lienCarteCTI.class='imgCarte';
+	lienCarteCTI.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_CTI.jpg';
+
+	document.getElementById('carteCTI').appendChild(lienCarteCTI);
+
+
+/*ici on crée la fonction click qui va s'activer en cliquant sur "afficher la carte" l'activation de
+cette fonction va actier la fonction displayImg()
+c'est une fonction toute faite*/
+
+nouveauLienCTI.addEventListener('click', function(e){
+e.preventDefault();
+displayImg(e.currentTarget);
+
+});
+
+/*la fonction displayImg permet de charger la carte grace à l'outil load */
+
+function displayImg(lien){
+	var img=new Image();
+	var overlay = document.getElementById('overlay');
+
+	  img.addEventListener('load', function() {
+        overlay.innerHTML = '';
+        overlay.appendChild(img);
+    });
+
+
+    img.src = lienCarteCTI.src;
+    overlay.style.display = 'block';
+    overlay.innerHTML = '<span>Chargement en cours...</span>';
+
+}
+
+document.getElementById('overlay').addEventListener('click', function(e) {
+    // currentTarget est utilisé pour cibler l'overlay et non l'image
+    e.currentTarget.style.display = 'none';
+});
+}
+	
+
+/**/
+/**/
+
+/**/
+/*on supprimer les cartes du client 
+lorsque l'utilisateur quite la page du client*/
+/**/
+
+function supprimerCartesClient(){
+
+	/*on supprime la carte NDVI*/
+
+		var carteNDVIEnfant= document.getElementById('lienCarteNDVI');
+		var lienNDVIEnfant= document.getElementById('nouveauLienNDVI');
+		var textEnfantNDVI = document.getElementById('nouveauTextNDVI');
+		var carteNDVIParent = document.getElementById('carteNDVI');
+		carteNDVIParent.removeChild(carteNDVIEnfant);	
+		carteNDVIParent.removeChild(lienNDVIEnfant);
+		carteNDVIParent.removeChild(textEnfantNDVI);
+
+	/*on supprime la carte MCARI*/
+
+		var carteMCARIEnfant= document.getElementById('lienCarteMCARI');
+		var lienMCARIEnfant= document.getElementById('nouveauLienMCARI');
+		var textEnfantMCARI= document.getElementById('nouveauTextMCARI');
+		var carteMCARIParent = document.getElementById('carteMCARI');
+		carteMCARIParent.removeChild(carteMCARIEnfant);	
+		carteMCARIParent.removeChild(lienMCARIEnfant);
+		carteMCARIParent.removeChild(textEnfantMCARI);			
+		
+
+	
+		/*on supprime la carte BI*/
+
+		var carteBIEnfant= document.getElementById('lienCarteBI');
+		var lienBIEnfant= document.getElementById('nouveauLienBI');
+		var textEnfantBI= document.getElementById('nouveauTextBI');
+		var carteBIParent = document.getElementById('carteBI');
+		carteBIParent.removeChild(carteBIEnfant);	
+		carteBIParent.removeChild(lienBIEnfant);
+		carteBIParent.removeChild(textEnfantBI);			
+		
+			/*on supprime la carte GI*/
+
+		var carteGIEnfant= document.getElementById('lienCarteGI');
+		var lienGIEnfant= document.getElementById('nouveauLienGI');
+		var textEnfantGI= document.getElementById('nouveauTextGI');
+		var carteGIParent = document.getElementById('carteGI');
+		carteGIParent.removeChild(carteGIEnfant);	
+		carteGIParent.removeChild(lienGIEnfant);
+		carteGIParent.removeChild(textEnfantGI);			
+		
+
+
+	/*on supprime la carte WI*/
+
+		var carteWIEnfant= document.getElementById('lienCarteWI');
+		var lienWIEnfant= document.getElementById('nouveauLienWI');
+		var textEnfantWI= document.getElementById('nouveauTextWI');
+		var carteWIParent = document.getElementById('carteWI');
+		carteWIParent.removeChild(carteWIEnfant);	
+		carteWIParent.removeChild(lienWIEnfant);
+		carteWIParent.removeChild(textEnfantWI);			
+		
+
+			/*on supprime la carte VTCI*/
+
+		var carteVTCIEnfant= document.getElementById('lienCarteVTCI');
+		var lienVTCIEnfant= document.getElementById('nouveauLienVTCI');
+		var textEnfantVTCI= document.getElementById('nouveauTextVTCI');
+		var carteVTCIParent = document.getElementById('carteVTCI');
+		carteVTCIParent.removeChild(carteVTCIEnfant);	
+		carteVTCIParent.removeChild(lienVTCIEnfant);
+		carteVTCIParent.removeChild(textEnfantVTCI);			
+		
+
+	
+		/*on supprime la carte CTI*/
+
+		var carteCTIEnfant= document.getElementById('lienCarteCTI');
+		var lienCTIEnfant= document.getElementById('nouveauLienCTI');
+		var textEnfantCTI= document.getElementById('nouveauTextCTI');
+		var carteCTIParent = document.getElementById('carteCTI');
+		carteCTIParent.removeChild(carteCTIEnfant);	
+		carteCTIParent.removeChild(lienCTIEnfant);
+		carteCTIParent.removeChild(textEnfantCTI);			
+		
+
+			/*on supprime la carte MTVI2*/
+
+		var carteMTVI2Enfant= document.getElementById('lienCarteMTVI2');
+		var lienMTVI2Enfant= document.getElementById('nouveauLienMTVI2');
+		var textEnfantMTVI2= document.getElementById('nouveauTextMTVI2');
+		var carteMTVI2Parent = document.getElementById('carteMTVI2');
+			
+		carteMTVI2Parent.removeChild(lienMTVI2Enfant);
+		carteMTVI2Parent.removeChild(textEnfantMTVI2);			
+		carteMTVI2Parent.removeChild(carteMTVI2Enfant);
+
+			/*on supprime la carte DEM*/
+
+		var carteDEMEnfant= document.getElementById('lienCarteDEM');
+		var lienDEMEnfant= document.getElementById('nouveauLienDEM');
+		var textEnfantDEM= document.getElementById('nouveauTextDEM');
+		var carteDEMParent = document.getElementById('carteDEM');
+		carteDEMParent.removeChild(carteDEMEnfant);	
+		carteDEMParent.removeChild(lienDEMEnfant);
+		carteDEMParent.removeChild(textEnfantDEM);			
+		
+
+
+}
+/**/
+/**/
+/**/
+
+
+
+
+
+
+
+
 
 
 /**/
@@ -7088,3 +7988,4 @@ function afficherResultat(){
 
 
 }
+

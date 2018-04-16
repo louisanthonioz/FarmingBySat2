@@ -240,7 +240,6 @@ function proceedFourthStep(){
 
   document.getElementById('fumure').value = '';
   document.getElementById('rdt').value = '';
-  document.getElementById('advdis').value = '';
   document.getElementById('daterecolte').value = '';
   document.getElementById('semoirs').value = '';
   document.getElementById('modeDestruction').value = '';
@@ -310,7 +309,6 @@ function nextInFourthStep(){
   e = document.getElementById("precRot");
   var nextRot = e.options[e.selectedIndex].value;
   var rdt = document.getElementById('rdt').value;
-  var avis = document.getElementById('advdis').value;
   var daterecolte = document.getElementById('daterecolte').value;
   var semoirs= document.getElementById('semoirs').value;
   var modeDestruction= document.getElementById('modeDestruction').value;
@@ -325,8 +323,7 @@ function nextInFourthStep(){
       dataParc.push(precRot);
       dataParc.push(nextRot);
       dataParc.push(fumureName);
-      dataParc.push(rdt);
-      dataParc.push(avis);
+      dataParc.push(rdt);;
       dataParc.push(fertFarmStarName);
       dataParc.push(anaSolName);
       dataParc.push(bilanNames);
