@@ -22,7 +22,7 @@ var parentCarte2;
 
 var joindre;
 
-var listeClient = ['a','b','c','d','e','f','g','h','i','j','k'];
+var listeClient = ['clients','a','b','c','d','e','f','g','h','i','j','k'];
 var ajouterClient;
 
 var deroulo;
