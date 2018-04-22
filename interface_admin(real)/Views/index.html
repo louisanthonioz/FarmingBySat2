@@ -10,8 +10,6 @@
     <!-- Penser à placer le nom de la startup dans le title -->
     <title>Mon copain le satellite</title>
     <meta charset="utf-8"></meta>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
     <link rel="stylesheet" type="text/css" href="css/general.css"/>
     <link rel="stylesheet" type="text/css" href="css/formulaire.css"/>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -59,7 +57,7 @@
 
 	  <p>
 		<h2>Séléctionnez le client</h2>
-         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient');lesCartesNouveau(); baseDeDonneesClient();" id="nouveauClientButton"/><br/><br/><br/>
+         Rechercher <input type = 'text' id='nouveauClient' placeholder="client"><input type="button" value="ok" onclick="rechercheNouveau('nouveauClient');lesCartesNouveau();creerParcelleLien()" id="nouveauClientButton"/><br/><br/><br/>
 
 
         <label>Liste des clients :</label>
@@ -68,7 +66,7 @@
 
         </select>
 
-        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau();baseDeDonneesClient();"
+        <input type="button" value="ok" onclick="rechercheNouveau('deroulo'); lesCartesNouveau();creerParcelleLien()"
                  id="nouveauClientButton"/>
                  <!--Le javascript va lancer les fonctions-->
       </p>
@@ -108,7 +106,7 @@ le java script va se charger d'aller récupérer le nom du client-->
 <div id="informationsPersonnellesClient"><h2>Informations personnelles du client</h2>
    
 
-<div id="nomClient">Nom : 
+<div id="LenomClient">Nom : 
 </div><br/>
 <div id="prenomClient">Prénom : </div><br/>
 <div id="telephoneClient">Téléphone : </div><br/>
@@ -161,8 +159,7 @@ le java script va se charger d'aller récupérer le nom du client-->
      <h2>les cartes</h2><br/><br/>
 
 <div id="carteNDVI"></div><br/>
-<div id="carteMCARI"></div><br/>
-<div id="carteMTVI2"></div><br/>
+<div id="carteMCARI/MTVI2"></div><br/>
 <div id="carteBI"></div><br/>
 <div id="carteGI"></div><br/>
 <div id="carteWI"></div><br/>
@@ -408,12 +405,17 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
             <form class="form-vertical" role="form" method="post" action="/email">
                 <div class="form-group">
                     <div class="col-sm-10">
-                        <input type="email" id="adresseMail" name="sender" id="sender" class="form-control" placeholder="Votre adresse mail"/>
+                        <input type="email" id="adresseMail" name="sender" id="sender" class="form-control" value="farmingbysat@gmail.com"/>
                     </div>
                 </div>
                  <div class="form-group">
                     <div class="col-sm-10">
-                        <input type="password" name="motDePasse" id="motDePasse" class="form-control" placeholder="Votre mot de passe"/>
+                        <input type="password" name="motDePasse" id="motDePasse" class="form-control" value="farmingbysat2018"/>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="nomClient" name="nomClient" id="nomClient" class="form-control" placeholder="nom du client"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -421,11 +423,15 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
                         <input type="emaill" name="destination" id="destination" class="form-control" placeholder="Adresse mail du destinataire"/>
                     </div>
                 </div>
+
+
                 <div class="form-group">
                     <div class="col-sm-10">
                         <input type="text" name="subject" id="subject" class="form-control" placeholder="L'objet du mail"/>
                     </div>
                 </div>
+
+                
 
                 <div class="form-group">
                     <div class="col-sm-10">
@@ -442,13 +448,16 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
                       
                     </div>
                 </div>
-                  
 
-            </form>
-              <button type="submit" id="joindreButton" onclick="choisirFichier()">Joindre</button>
-                <input type="file" id="joindre"  name="uploads[]" onclick= "telechargerFichier()" >   
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-            <!--Le javascript lance les fonction--> 
+                   <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="file" name="joindreFichier" id="joindre" class="form-control" placeholder="joindre un fichier"/>
+                    </div>
+                </div>
+                
+
+
+        </form>
         </div>
 
 
@@ -457,7 +466,7 @@ boutton envoyer mail qui permet d'arriver sur la cinquième page cad la page du 
 
 
 <div id="retour2">
-    <input type="button" value="retour" id="retourButton" onclick="retour2();element5();" >
+    <input type="button" value="retour" id="retourButton" onclick="retour2()" >
     Voir client
 </div>
 

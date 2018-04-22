@@ -8,7 +8,4 @@ socket.on('message', function(message) {
   alert('Le serveur a un message pour vous : '+message);
 });
  
- function supprimerDonnees(){
-  	socket.emit('supprimer', "il faut supprimer toutes les données de la page");
-  	
-  };     
+ 

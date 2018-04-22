@@ -47,44 +47,7 @@ io.sockets.on('connection', function (socket) {
     // Alert the server
     console.log("Un client s'est connecté");
 
-
-    /*fonction pour suprimer les données de la page 5
-    si on quite cette page*/
-    socket.on('supprimer', function(message){
-
-      console.log('l\'admi a un message pour le server : '+message);
-      deleteFolder('./Ressources/farmingData/');
-      console.log('Dossier supprimé');
-
-    
-    
-
-});
-
-  });
-
-/*fonction qui suprime les fichiers placer dans farmingData*/
-
-/*  Allow server to recursively delete a folder and it content by passing it path */
-function deleteFolder(path) {
-  if( fs.existsSync(path) ) {
-    fs.readdirSync(path).forEach(function(file) {
-      var curPath = path + "/" + file;
-        if(fs.statSync(curPath).isDirectory()) { // recurse
-          deleteFolderRecursive(curPath);
-        } else { // delete file
-          fs.unlinkSync(curPath);
-        }
-    });
-   
-  }
-   
-
-
-}
-
-
-
+ 
 
 
 /**/
@@ -128,9 +91,12 @@ app.post('/email', function(req, res, next) {
           text: req.body.message, // plain text body
           html: '<b>'+ req.body.message +'</b>', // html body
          /* la fonction attachments permet de joindre un fichier*/
-          attachments : attachments
+         
+         attachments : [{filename: req.body.joindreFichier, path: './Ressources/farmingData/'+req.body.nomClient+'/'+req.body.joindreFichier, contentType:'aplication/pdf' }]
           
       };
+
+
 
       /* c'est la fonction qui permet d'envoyer le mail
       on rajoute un console.log dans le cas si ça marche avec un message confirmant l'envoie 
@@ -141,61 +107,16 @@ app.post('/email', function(req, res, next) {
               return console.log(error);
           }
           console.log('Message %s sent: %s', info.messageId, info.response);
+          socket.emit('message', 'le mail vient d\'être envoyé');
               res.render('index');
           });
-      });
-var attachments =[{ filename: 'BilanParcelles.pdf', path: './Ressources/farmingData/BilanParcelles.pdf', contentType:'aplication/pdf' }];
-          
+               
+
+ });
 
 
-
-/*fonction pour récupérer le fichier joint
-on l'insère dans le dossier farmingData*/
-// Event to handle uploads files
-
-app.post('/upload', function(req, res){
-
-  // create an incoming form object
-  var form = new formidable.IncomingForm();
-
-  // specify that we want to allow the user to upload multiple files in a single request
-  form.multiples = true;
-  
-  var dir = "/Ressources/farmingData/";
-
-  // store all uploads in the /uploads directory
-  form.uploadDir = path.join(__dirname, dir);
-
-  // every time a file has been uploaded successfully,
-  // rename it to it's orignal name
-  form.on('file', function(field, file) {
-    fs.rename(file.path, path.join(form.uploadDir, file.name));
-  });
-
-  // log any errors that occur
-  form.on('error', function(err) {
-    console.log('An error has occured: \n' + err);
-  });
-
-  // once all the files have been uploaded, send a response to the client
-  form.on('end', function() {
-    res.end('success');
-  });
-
-  // parse the incoming request containing the form data
-  form.parse(req);
-
+/*on ferme le socket ici*/
 });
-
-
-/**/
-/**/
-/**/
-/*fonction qui permet de lire les fichiers joints afin de les envoyer*/
-/**/
-/**/
-
-
 
 
 

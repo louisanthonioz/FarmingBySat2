@@ -326,7 +326,7 @@ option[value=""][disabled] {
 {
     text-align: left;
 }
-#message, #subject, #destination, #adresseMail, #motDePasse
+#message, #subject,#joindre, #destination,#nomClient, #adresseMail, #motDePasse
 {
     display: inline-block;
     
@@ -347,10 +347,6 @@ option[value=""][disabled] {
     height: 30vh;
 }
 
-#joindre
-{
-    display: none;
-}
 
 #joindreButton
 {
