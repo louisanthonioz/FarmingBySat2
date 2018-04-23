@@ -102,7 +102,7 @@ function goSecondStepAgain(){
 		document.getElementById('pageMotDePasse').style.display='none';
 		document.getElementById('nouveauMotDePasse').style.display="block";
 		document.getElementById('ajouterAdministrateur').style.display="block";
-		faireLaListe();
+		
 	}
 	else{
 		alert("mot de passe ou identifiant incorrect");
@@ -141,7 +141,7 @@ function goSecondStepAgain2(){
 		document.getElementById('pageAjouterAdministrateur').style.display='none';
 		document.getElementById('nouveauMotDePasse').style.display="block";
 		document.getElementById('ajouterAdministrateur').style.display="block";
-		faireLaListe();
+		
 	}
 	else{
 		alert("mot de passe ou identifiant incorrect");
