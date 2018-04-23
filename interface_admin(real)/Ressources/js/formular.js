@@ -58,6 +58,89 @@ function goSecondStep(){
 	if (mdp == test && id == idadmin ){
 		document.getElementById('secondStep').style.display = "block";
 		document.getElementById('firstStep').style.display = "none";
+		document.getElementById('nouveauMotDePasse').style.display="block";
+		document.getElementById('ajouterAdministrateur').style.display="block";
+		faireLaListe();
+	}
+	else{
+		alert("mot de passe ou identifiant incorrect");
+		
+	}	
+}
+
+/**/
+/**/
+/*fonction pour charger la page pour créer le nouveau mot de passe*/
+/**/
+/**/
+
+function creerMotDePasse(){
+	document.getElementById('pageMotDePasse').style.display='block';
+	document.getElementById('secondStep').style.display = 'none';
+	document.getElementById('nouveauMotDePasse').style.display="none";
+	document.getElementById('ajouterAdministrateur').style.display="none";
+	
+}
+
+/**/
+/**/
+/*fonction pour changer le mot de passe, 
+le mot de passe à enrgister dans la bdd est "nouveauMotDePasse*/
+/**/
+/**/
+
+
+function goSecondStepAgain(){
+
+	/* on crée une variable test qui est la valeur correcte
+ du mot de passe et la variable administrateur la valeur correcte de id*/
+	
+	 var nouveauMotDePasse=document.getElementById('nouveauMotDePasse1').value;
+	 var confirmerMotDePasse=document.getElementById('confirmerMotDePasse').value;
+	if (nouveauMotDePasse==confirmerMotDePasse ){
+		document.getElementById('secondStep').style.display = "block";
+		document.getElementById('pageMotDePasse').style.display='none';
+		document.getElementById('nouveauMotDePasse').style.display="block";
+		document.getElementById('ajouterAdministrateur').style.display="block";
+		faireLaListe();
+	}
+	else{
+		alert("mot de passe ou identifiant incorrect");
+		
+	}	
+}
+
+/**/
+/**/
+/*fonction pour charger la page pour créer un nouveau administrateur*/
+/**/
+/**/
+
+function creerAdministrateur(){
+	document.getElementById('pageAjouterAdministrateur').style.display='block';
+	document.getElementById('secondStep').style.display = 'none';
+	document.getElementById('nouveauMotDePasse').style.display="none";
+	document.getElementById('ajouterAdministrateur').style.display="none";
+	
+}
+
+/*fonction qui créer un nouveau administrateur
+l'administrateur a enregistrer dans la bdd est 'nouveauID
+le mot de passe qui va avec est 'nouveauMotDePasse*/
+
+function goSecondStepAgain2(){
+
+	/* on crée une variable test qui est la valeur correcte
+ du mot de passe et la variable administrateur la valeur correcte de id*/
+	 	
+	 var nouveauID=document.getElementById('nouveauAdministateur1').value;
+	 var nouveauMotDePasse=document.getElementById('motDePasse2').value;
+	 var confirmerMotDePasse=document.getElementById('confirmerMotDePasse2').value;
+	if (nouveauMotDePasse==confirmerMotDePasse){
+		document.getElementById('secondStep').style.display = "block";
+		document.getElementById('pageAjouterAdministrateur').style.display='none';
+		document.getElementById('nouveauMotDePasse').style.display="block";
+		document.getElementById('ajouterAdministrateur').style.display="block";
 		faireLaListe();
 	}
 	else{
@@ -80,6 +163,8 @@ function rechercheNouveau(client){
 	
 	document.getElementById('fourthStep').style.display = "block";
 	document.getElementById('secondStep').style.display = 'none';
+	document.getElementById('nouveauMotDePasse').style.display="none";
+	document.getElementById('ajouterAdministrateur').style.display="none";
 	
 	
 	nomPrenom = document.createElement('h2');
@@ -138,6 +223,8 @@ function element4(){
 function retour(){
 	document.getElementById('fourthStep').style.display = "none";
 	document.getElementById('secondStep').style.display= "block";
+	document.getElementById('nouveauMotDePasse').style.display="block";
+	document.getElementById('ajouterAdministrateur').style.display="block";
 	document.getElementById('renseignementClientPage2').style.display='none';
 	supprimerBaseDeDonneesClient();
 	supprimerParcelle();

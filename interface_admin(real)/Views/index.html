@@ -73,7 +73,54 @@
 	</div>
 </div>
 
+<div id='nouveauMotDePasse'><input type="button" value="Nouveau mot de passe" id="nouveauMotDePasseBoutton" onclick="creerMotDePasse()"></div>
 
+<div id='ajouterAdministrateur'><input type="button" value="Ajouter un administrateur" id="nouveauAdministrateurBoutton" onclick="creerAdministrateur()"></div>
+
+
+
+
+<!---->
+<!---->
+<!--la page pour chager le mot de passe-->
+<!---->
+<!---->
+<div id="pageMotDePasse">
+
+     <img id="explainImages2" class="imgadmin3" src="images/admin3.png"/>
+
+    <h1> Le nouveau mot de passe  </h1><br/>
+
+         <input type="password" placeholder="Entrer nouveau mot de passe" id="nouveauMotDePasse1"><br/><br/>
+
+         <input type="password" placeholder="Confirmer le mot de passe" id="confirmerMotDePasse">
+
+         <input type="button" value = "Go!" id="bouton2" onclick="goSecondStepAgain()"> 
+</div>
+
+
+<!---->
+<!---->
+<!--la page pour ajouter un administrateur-->
+<!---->
+<!---->
+
+
+<div id="pageAjouterAdministrateur">
+
+     <img id="explainImages3" class="imgadmin3" src="images/admin3.png"/>
+
+    
+        <h1 id="leNouveauAdministrateur"> Le nouveau administrateur</h1><br/>
+
+         <input type="test" placeholder="Entrer ID nouveau administrateur" id="nouveauAdministateur1"><br/><br/>
+
+         <input type="password" placeholder="entrer le mot de passe" id="motDePasse2"><br/><br/>
+
+        <input type="password" placeholder="Confirmer le mot de passe" id="confirmerMotDePasse2">
+
+         <input type="button" value = "Go!" id="bouton3" onclick="goSecondStepAgain2()"> 
+</div>
 
 <!-- en dessous 4e page
 Dans cette page il y atutes les informations concernant le client-->

@@ -19,7 +19,7 @@
 }
 #firstStep{display: block;}
 
-#bouton1 {
+#bouton1, #bouton2, #bouton3 {
 height: 5vh;
 width: 5vw; 
 background: brown; 
@@ -30,9 +30,17 @@ border-radius: 1vw;
 background: green; 
 }
 
+#bouton2:hover {
+background: green; 
+}
+
+#bouton3:hover {
+background: green; 
+}
 
 
-#password, #identifiant
+#password, #identifiant, #nouveauMotDePasse1, #confirmerMotDePasse,
+#confirmerMotDePasse2, #nouveauAdministateur1, #motDePasse2
 {
     margin-left : 45vw;
     border-radius: 2vw;
@@ -40,6 +48,24 @@ background: green;
     text-align: center;
 
 }
+
+
+#confirmerMotDePasse
+{
+    min-width: 15vw;
+}
+
+#nouveauMotDePasse1
+{
+    min-width: 15vw;
+}
+
+#pageAjouterAdministrateur
+{
+    display: none;
+}
+
+
 h1
 {
     color: brown;
@@ -85,6 +111,41 @@ option[value=""][disabled] {
     margin-top: 10vh;
     
 }
+
+#pageMotDePasse
+{
+    display: none;
+}
+
+#nouveauMotDePasse,#ajouterAdministrateur
+{
+    display: none;
+    
+     
+   
+}
+#nouveauMotDePasse
+{
+    margin-top: 20vh;
+   
+}
+
+#ajouterAdministrateur
+{
+    margin-top: 2vh;
+}
+
+#nouveauMotDePasseBoutton, #nouveauAdministrateurBoutton
+{
+     background : none;
+    font-size: 2vh;
+     background-color: rgba(255,255,255,0.8);
+    border-radius: 1vh;
+    height: 6vh;
+    min-width: 5vh;
+    text-align: center;
+}
+
 
 /**/
 /**/
