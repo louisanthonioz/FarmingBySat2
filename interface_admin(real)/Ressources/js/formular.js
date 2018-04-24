@@ -85,7 +85,8 @@ function creerMotDePasse(){
 /**/
 /**/
 /*fonction pour changer le mot de passe, 
-le mot de passe à enrgister dans la bdd est "nouveauMotDePasse*/
+le mot de passe à enrgister dans la bdd est "nouveauMotDePasse
+son identifiant est 'administrateur2*/
 /**/
 /**/
 
@@ -536,7 +537,7 @@ on limite la taille de la carte pour qu'elle reste petite
 	var lienCarteDEM= document.createElement('img');
 	lienCarteDEM.id='lienCarteDEM';
 	lienCarteDEM.class='imgCarte';
-	lienCarteDEM.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_DEM.jpg';
+	lienCarteDEM.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_DEM.png';
 
 	document.getElementById('carteDEM').appendChild(lienCarteDEM);
 

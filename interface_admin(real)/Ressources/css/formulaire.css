@@ -40,7 +40,7 @@ background: green;
 
 
 #password, #identifiant, #nouveauMotDePasse1, #confirmerMotDePasse,
-#confirmerMotDePasse2, #nouveauAdministateur1, #motDePasse2
+#confirmerMotDePasse2, #nouveauAdministateur1, #motDePasse2, #administrateur2
 {
     margin-left : 45vw;
     border-radius: 2vw;
@@ -49,6 +49,10 @@ background: green;
 
 }
 
+#confirmerMotDePasse2
+{
+    min-width: 15vw
+}
 
 #confirmerMotDePasse
 {
