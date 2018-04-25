@@ -28,9 +28,6 @@ var ajouterClient;
 var deroulo;
 var nomClient;
 
-var nouveauID;
-var nouveauMotDePasse;
-var confirmerMotDePasse;
 
 
 
@@ -54,33 +51,22 @@ function goSecondStep(){
  du mot de passe et la variable administrateur la valeur correcte de id*/
 	 mdp = document.getElementById("password").value;
 	 id = document.getElementById("identifiant").value;
-
-    adminLogin(id, mdp);
-    console.log(connect);
-    
-    // sleep time expects milliseconds
-    function sleep (time) {
-        return new Promise((resolve) => setTimeout(resolve, time));
-    }
-
-        // Usage!
-    sleep(1000).then(() => {
-    // Do something after the sleep!
-        console.log(connect);
-        if(connect == 1){ 
+	 test = 'test';
+	 idadmin = 'administrateur';
 	
-            document.getElementById('secondStep').style.display = "block";
-		  document.getElementById('firstStep').style.display = "none";
-		  document.getElementById('nouveauMotDePasse').style.display="block";
-		  document.getElementById('ajouterAdministrateur').style.display="block";
-		  faireLaListe();
-	   }
-	   else{
-		alert("mot de passe ou identifiant incorrect");
-	   }	
-    });
-}
 
+	if (mdp == test && id == idadmin ){
+		document.getElementById('secondStep').style.display = "block";
+		document.getElementById('firstStep').style.display = "none";
+		document.getElementById('nouveauMotDePasse').style.display="block";
+		document.getElementById('ajouterAdministrateur').style.display="block";
+		faireLaListe();
+	}
+	else{
+		alert("mot de passe ou identifiant incorrect");
+		
+	}	
+}
 
 /**/
 /**/
@@ -99,7 +85,8 @@ function creerMotDePasse(){
 /**/
 /**/
 /*fonction pour changer le mot de passe, 
-le mot de passe à enrgister dans la bdd est "nouveauMotDePasse*/
+le mot de passe à enrgister dans la bdd est "nouveauMotDePasse
+son identifiant est 'administrateur2*/
 /**/
 /**/
 
@@ -109,10 +96,9 @@ function goSecondStepAgain(){
 	/* on crée une variable test qui est la valeur correcte
  du mot de passe et la variable administrateur la valeur correcte de id*/
 	
-	 nouveauMotDePasse=document.getElementById('nouveauMotDePasse1').value;
-	 confirmerMotDePasse=document.getElementById('confirmerMotDePasse').value;
+	 var nouveauMotDePasse=document.getElementById('nouveauMotDePasse1').value;
+	 var confirmerMotDePasse=document.getElementById('confirmerMotDePasse').value;
 	if (nouveauMotDePasse==confirmerMotDePasse ){
-        changeAdminPsw(administrateur, nouveauMotDePasse);
 		document.getElementById('secondStep').style.display = "block";
 		document.getElementById('pageMotDePasse').style.display='none';
 		document.getElementById('nouveauMotDePasse').style.display="block";
@@ -123,7 +109,6 @@ function goSecondStepAgain(){
 		alert("mot de passe ou identifiant incorrect");
 		
 	}	
-    var administrateur = document.getElementById('administrateur2').value;
 }
 
 /**/
@@ -144,18 +129,15 @@ function creerAdministrateur(){
 l'administrateur a enregistrer dans la bdd est 'nouveauID
 le mot de passe qui va avec est 'nouveauMotDePasse*/
 
-
-
 function goSecondStepAgain2(){
 
 	/* on crée une variable test qui est la valeur correcte
  du mot de passe et la variable administrateur la valeur correcte de id*/
 	 	
-	 nouveauID=document.getElementById('nouveauAdministateur1').value;
-	 nouveauMotDePasse=document.getElementById('motDePasse2').value;
-	 confirmerMotDePasse=document.getElementById('confirmerMotDePasse2').value;
+	 var nouveauID=document.getElementById('nouveauAdministateur1').value;
+	 var nouveauMotDePasse=document.getElementById('motDePasse2').value;
+	 var confirmerMotDePasse=document.getElementById('confirmerMotDePasse2').value;
 	if (nouveauMotDePasse==confirmerMotDePasse){
-        addAnAdmin(nouveauID, nouveauMotDePasse);
 		document.getElementById('secondStep').style.display = "block";
 		document.getElementById('pageAjouterAdministrateur').style.display='none';
 		document.getElementById('nouveauMotDePasse').style.display="block";
@@ -165,7 +147,7 @@ function goSecondStepAgain2(){
 	else{
 		alert("mot de passe ou identifiant incorrect");
 		
-	}
+	}	
 }
 
 /* rechercheNouveau: fonction qui permet de passer sur la 4e page
@@ -555,7 +537,7 @@ on limite la taille de la carte pour qu'elle reste petite
 	var lienCarteDEM= document.createElement('img');
 	lienCarteDEM.id='lienCarteDEM';
 	lienCarteDEM.class='imgCarte';
-	lienCarteDEM.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_DEM.jpg';
+	lienCarteDEM.src ='farmingData/'+nouveauClient+'/'+nouveauClient+'_DEM.png';
 
 	document.getElementById('carteDEM').appendChild(lienCarteDEM);
 

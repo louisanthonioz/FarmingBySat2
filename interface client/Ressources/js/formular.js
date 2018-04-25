@@ -85,7 +85,6 @@ function goSecondStep(){
   }else{
     alert("Le nom est invalide");
   }
-sendClientToBdd(name, firstname, number, adress, postalCode, city, mail);
 }
 
 function initMap() {
@@ -264,7 +263,7 @@ function proceedFourthStep(){
 
   console.log(tempDatas);
 
-  sendClientToBdd2(precRot, nextRot, fumureName, rdt, avis, fertFarmStarName, anaSolName, bilanNames, cartoRdtName, daterecolte, semoirs, modeDestruction, remParcelle, compactions, adventices, maladies, ravageurs);
+  sendUserDataParc(tempDatas);
 
   document.getElementById('fourthStep').style.display = 'block';
 }

@@ -77,8 +77,6 @@ function creerParcelleLien(){
 
 
 		}
-    
-    else{baseDeDonneesClient();}
 
 }
 
@@ -167,39 +165,22 @@ function baseDeDonneesNacim(){
 
 	var nomDuClient = document.createElement('div');
 	nomDuClient.id ='nomDuClient';
-	var nomClientParent=document.getElementById('nomClient');
+	var nomClientParent=document.getElementById('LenomClient');
 
 	nomClientParent.appendChild(nomDuClient);
 
-	var nomClientText = document.createTextNode("");
-	nomDuClient.appendChild(nomClientText);
-        
-    //attend la reponse
-    function sleep (time) {
-        return new Promise((resolve) => setTimeout(resolve, time));
-    }
-     sleep(3000).then(() => {     
-         
-    		/*on crée le nom*/
-
-	var nomDuClient = document.createElement('div');
-	nomDuClient.id ='nomDuClient';
-	var nomClientParent=document.getElementById('nomClient');
-
-	nomClientParent.appendChild(nomDuClient);
-
-	var nomClientText = document.createTextNode(nom);
+	var nomClientText = document.createTextNode("Ihaddadene");
 	nomDuClient.appendChild(nomClientText);
 
 			/*on crée le prénom*/
 
-    var prenomDuClient = document.createElement('div');
+			var prenomDuClient = document.createElement('div');
 	prenomDuClient.id ='prenomDuClient';
 	var prenomClientParent=document.getElementById('prenomClient');
 
 	prenomClientParent.appendChild(prenomDuClient);
 
-	var prenomClientText = document.createTextNode(prenom);
+	var prenomClientText = document.createTextNode("Nacim");
 	prenomDuClient.appendChild(prenomClientText);
 
 			/*on crée le téléphone*/
@@ -210,7 +191,7 @@ function baseDeDonneesNacim(){
 
 	telephoneClientParent.appendChild(telephoneDuClient);
 
-	var telephoneClientText = document.createTextNode(numero);
+	var telephoneClientText = document.createTextNode("0662783457");
 	telephoneDuClient.appendChild(telephoneClientText);
 
 
@@ -222,7 +203,7 @@ function baseDeDonneesNacim(){
 
 	adresseMailClientParent.appendChild(adresseMailDuClient);
 
-	var adresseMailClientText = document.createTextNode(email);
+	var adresseMailClientText = document.createTextNode("nacim.ihaddadene@yncrea.fr");
 	adresseMailDuClient.appendChild(adresseMailClientText);
 
 
@@ -234,7 +215,7 @@ function baseDeDonneesNacim(){
 
 	rueClientParent.appendChild(rueDuClient);
 
-	var rueClientText = document.createTextNode(adresse);
+	var rueClientText = document.createTextNode("Rue National");
 	rueDuClient.appendChild(rueClientText);
 
 
@@ -246,8 +227,20 @@ function baseDeDonneesNacim(){
 
 	codePostalClientParent.appendChild(codePostalDuClient);
 
-	var codePostalClientText = document.createTextNode(postalCode);
+	var codePostalClientText = document.createTextNode("59800");
 	codePostalDuClient.appendChild(codePostalClientText);
+
+
+			/*on crée la ville*/
+
+				var villeDuClient = document.createElement('div');
+	villeDuClient.id ='villeDuClient';
+	var villeClientParent=document.getElementById('villeClient');
+
+	villeClientParent.appendChild(villeDuClient);
+
+	var villeClientText = document.createTextNode("Lille");
+	villeDuClient.appendChild(villeClientText);
 
 			/*on crée le nombre d'hectare*/
 
@@ -298,7 +291,7 @@ function baseDeDonneesNacim(){
 	declarationPACDuClient.appendChild(declarationPACClientText);
 
 
-     });
+
 		
 }
 
@@ -1013,352 +1006,6 @@ if(numero==2){
 	remarqueDuClient.appendChild(remarqueClientText);
 
 }
-
-
-	}
-
-
-function baseDeDonneesClient(){
-    
-    
-    
-
-		/*on crée le nom*/
-
-	var nomDuClient = document.createElement('div');
-	nomDuClient.id ='nomDuClient';
-	var nomClientParent=document.getElementById('nomClient');
-
-	nomClientParent.appendChild(nomDuClient);
-
-	var nomClientText = document.createTextNode("");
-	nomDuClient.appendChild(nomClientText);
-    
-    lookForAClient(nomClientParent);
-    
-    //attend la reponse
-    function sleep (time) {
-        return new Promise((resolve) => setTimeout(resolve, time));
-    }
-     sleep(3000).then(() => {     
-         
-    		/*on crée le nom*/
-
-	var nomDuClient = document.createElement('div');
-	nomDuClient.id ='nomDuClient';
-	var nomClientParent=document.getElementById('nomClient');
-
-	nomClientParent.appendChild(nomDuClient);
-
-	var nomClientText = document.createTextNode(nom);
-	nomDuClient.appendChild(nomClientText);
-
-			/*on crée le prénom*/
-
-    var prenomDuClient = document.createElement('div');
-	prenomDuClient.id ='prenomDuClient';
-	var prenomClientParent=document.getElementById('prenomClient');
-
-	prenomClientParent.appendChild(prenomDuClient);
-
-	var prenomClientText = document.createTextNode(prenom);
-	prenomDuClient.appendChild(prenomClientText);
-
-			/*on crée le téléphone*/
-
-	var telephoneDuClient = document.createElement('div');
-	telephoneDuClient.id ='telephoneDuClient';
-	var telephoneClientParent=document.getElementById('telephoneClient');
-
-	telephoneClientParent.appendChild(telephoneDuClient);
-
-	var telephoneClientText = document.createTextNode(numero);
-	telephoneDuClient.appendChild(telephoneClientText);
-
-
-			/*on crée l'adresse mail*/
-
-			var adresseMailDuClient = document.createElement('div');
-	adresseMailDuClient.id ='adresseMailDuClient';
-	var adresseMailClientParent=document.getElementById('adresseMailClient');
-
-	adresseMailClientParent.appendChild(adresseMailDuClient);
-
-	var adresseMailClientText = document.createTextNode(email);
-	adresseMailDuClient.appendChild(adresseMailClientText);
-
-
-			/*on crée la rue*/
-
-			var rueDuClient = document.createElement('div');
-	rueDuClient.id ='rueDuClient';
-	var rueClientParent=document.getElementById('rueClient');
-
-	rueClientParent.appendChild(rueDuClient);
-
-	var rueClientText = document.createTextNode(adresse);
-	rueDuClient.appendChild(rueClientText);
-
-
-			/*on crée le code Postal*/
-
-	var codePostalDuClient = document.createElement('div');
-	codePostalDuClient.id ='codePostalDuClient';
-	var codePostalClientParent=document.getElementById('codePostalClient');
-
-	codePostalClientParent.appendChild(codePostalDuClient);
-
-	var codePostalClientText = document.createTextNode(postalCode);
-	codePostalDuClient.appendChild(codePostalClientText);
-
-
-			/*on crée la ville*/
-
-				var villeDuClient = document.createElement('div');
-	villeDuClient.id ='villeDuClient';
-	var villeClientParent=document.getElementById('villeClient');
-
-	villeClientParent.appendChild(villeDuClient);
-
-	var villeClientText = document.createTextNode(ville);
-	villeDuClient.appendChild(villeClientText);
-
-			/*on crée le nombre d'hectare*/
-
-			var nombreHectareDuClient = document.createElement('div');
-	nombreHectareDuClient.id ='nombreHectareDuClient';
-	var nombreHectareClientParent=document.getElementById('nombreHectareClient');
-
-	nombreHectareClientParent.appendChild(nombreHectareDuClient);
-
-	var nombreHectareClientText = document.createTextNode("ici on appelle le nombre d'hectare du client");
-	nombreHectareDuClient.appendChild(nombreHectareClientText);
-
-			/*on crée le nombre de parcelle*/
-
-				var nombreParcelleDuClient = document.createElement('div');
-	nombreParcelleDuClient.id ='nombreParcelleDuClient';
-	var nombreParcelleClientParent=document.getElementById('nombreParcelleClient');
-
-	nombreParcelleClientParent.appendChild(nombreParcelleDuClient);
-
-	var nombreParcelleClientText = document.createTextNode("ici on appelle le nombre de parcelles du client");
-	nombreParcelleDuClient.appendChild(nombreParcelleClientText);
-
-
-			/*on crée la situation parcelle*/
-
-			var situationParcelleDuClient = document.createElement('div');
-	situationParcelleDuClient.id ='situationParcelleDuClient';
-	var situationParcelleClientParent=document.getElementById('situationParcelleClient');
-
-	situationParcelleClientParent.appendChild(situationParcelleDuClient);
-
-	var situationParcelleClientText = document.createTextNode("ici on appelle la situation des parcelles du client");
-	situationParcelleDuClient.appendChild(situationParcelleClientText);
-
-
-
-			/*on crée la déclaration pac client*/
-
-			var declarationPACDuClient = document.createElement('div');
-	declarationPACDuClient.id ='declarationPACDuClient';
-	var declarationPACClientParent=document.getElementById('declarationPACClient');
-
-	declarationPACClientParent.appendChild(declarationPACDuClient);
-
-	var declarationPACClientText = document.createTextNode("ici on appelle la déclaration PAC du client");
-	declarationPACDuClient.appendChild(declarationPACClientText);
-
-    });
-
-		
-}
-
-/**/
-/**/
-/**/
-/*fonction qui crée les éléments de la base de données
- à insérer concernant les parcelles
- cad dans la page parcelle*/
-/**/
-/**/
-/**/
-
-
-function baseDeDonneesParcelleClient(){
-
-
-
-			/*on crée la culture précédente*/
-
-
-			var culturePrecedenteDuClient = document.createElement('div');
-	culturePrecedenteDuClient.id ='culturePrecedenteDuClient';
-	var culturePrecedenteClientParent=document.getElementById('culturePrecedenteClient');
-
-	culturePrecedenteClientParent.appendChild(culturePrecedenteDuClient);
-
-	var culturePrecedenteClientText = document.createTextNode(rotPrecedente);
-	culturePrecedenteDuClient.appendChild(culturePrecedenteClientText);
-
-
-			/*on crée la culture suivante*/
-
-
-			var cultureSuivanteDuClient = document.createElement('div');
-	cultureSuivanteDuClient.id ='cultureSuivanteDuClient';
-	var cultureSuivanteClientParent=document.getElementById('cultureSuivanteClient');
-
-	cultureSuivanteClientParent.appendChild(cultureSuivanteDuClient);
-
-	var cultureSuivanteClientText = document.createTextNode(rotNouvelle);
-	cultureSuivanteDuClient.appendChild(cultureSuivanteClientText);
-
-
-			/*on crée la date de récolte*/
-
-			var dateRecolteDuClient = document.createElement('div');
-	dateRecolteDuClient.id ='dateRecolteDuClient';
-	var dateRecolteClientParent=document.getElementById('dateRecolteClient');
-
-	dateRecolteClientParent.appendChild(dateRecolteDuClient);
-
-	var dateRecolteClientText = document.createTextNode(daterecolteClient);
-	dateRecolteDuClient.appendChild(dateRecolteClientText);
-
-
-			/*on crée le plan de fumure */
-
-				var planFumureDuClient = document.createElement('div');
-	planFumureDuClient.id ='planFumureDuClient';
-	var planFumureClientParent=document.getElementById('planFumureClient');
-
-	planFumureClientParent.appendChild(planFumureDuClient);
-
-	var planFumureClientText = document.createTextNode(fumur);
-	planFumureDuClient.appendChild(planFumureClientText);
-
-
-			/*on crée la cartographie de fertilisation*/
-
-
-				var cartographieFertilisationDuClient = document.createElement('div');
-	cartographieFertilisationDuClient.id ='cartographieFertilisationDuClient';
-	var cartographieFertilisationClientParent=document.getElementById('cartographieFertilisationClient');
-
-	cartographieFertilisationClientParent.appendChild(cartographieFertilisationDuClient);
-
-	var cartographieFertilisationClientText = document.createTextNode(cartoRdtNameClient);
-	cartographieFertilisationDuClient.appendChild(cartographieFertilisationClientText);
-
-
-
-			/*on crée es reliquats sortie d'hiver*/
-
-
-				var reliquatsHiverDuClient = document.createElement('div');
-	reliquatsHiverDuClient.id ='reliquatsHiverDuClient';
-	var reliquatsHiverClientParent=document.getElementById('reliquatsHiverClient');
-
-	reliquatsHiverClientParent.appendChild(reliquatsHiverDuClient);
-
-	var reliquatsHiverClientText = document.createTextNode("ici on appelle les reliquatssorties d'hiver du client");
-	reliquatsHiverDuClient.appendChild(reliquatsHiverClientText);
-
-				/*on crée l'analyse sol*/
-
-
-				var analyseSolDuClient = document.createElement('div');
-	analyseSolDuClient.id ='analyseSolDuClient';
-	var analyseSolClientParent=document.getElementById('analyseSolClient');
-
-	analyseSolClientParent.appendChild(analyseSolDuClient);
-
-	var analyseSolClientText = document.createTextNode(anaSolNameClient);
-	analyseSolDuClient.appendChild(analyseSolClientText);
-
-
-			/*on crée le type de semoir*/
-
-
-				var typeSemoirDuClient = document.createElement('div');
-	typeSemoirDuClient.id ='typeSemoirDuClient';
-	var typeSemoirClientParent=document.getElementById('typeSemoirClient');
-
-	typeSemoirClientParent.appendChild(typeSemoirDuClient);
-
-	var typeSemoirClientText = document.createTextNode(semoirsClient);
-	typeSemoirDuClient.appendChild(typeSemoirClientText);
-
-			/*on crée le mode de destruction*/
-
-
-				var modeDestructionDuClient = document.createElement('div');
-	modeDestructionDuClient.id ='modeDestructionDuClient';
-	var modeDestructionClientParent=document.getElementById('modeDestructionClient');
-
-	modeDestructionClientParent.appendChild(modeDestructionDuClient);
-
-	var modeDestructionClientText = document.createTextNode(modeDestructionClient);
-	modeDestructionDuClient.appendChild(modeDestructionClientText);
-
-
-			/*on crée les problèmes de la parcelle*/
-
-
-				var problemeParcelleDuClient = document.createElement('div');
-	problemeParcelleDuClient.id ='problemeParcelleDuClient';
-	var problemeParcelleClientParent=document.getElementById('problemeParcelleClient');
-
-	problemeParcelleClientParent.appendChild(problemeParcelleDuClient);
-
-	var problemeParcelleClientText = document.createTextNode(remParcelleClient);
-	problemeParcelleDuClient.appendChild(problemeParcelleClientText);
-
-
-
-			/*on crée le rendement*/
-
-
-				var leRendementDuClient = document.createElement('div');
-	leRendementDuClient.id ='leRendementDuClient';
-	var leRendementClientParent=document.getElementById('leRendementClient');
-
-	leRendementClientParent.appendChild(leRendementDuClient);
-
-	var leRendementClientText = document.createTextNode(rdtClient);
-	leRendementDuClient.appendChild(leRendementClientText);
-
-
-
-			/*on crée la cartographie de rendement*/
-
-
-
-				var cartographieRendementDuClient = document.createElement('div');
-	cartographieRendementDuClient.id ='cartographieRendementDuClient';
-	var cartographieRendementClientParent=document.getElementById('cartographieRendementClient');
-
-	cartographieRendementClientParent.appendChild(cartographieRendementDuClient);
-
-	var cartographieRendementClientText = document.createTextNode(cartoRdtNameClient);
-	cartographieRendementDuClient.appendChild(cartographieRendementClientText);
-
-			/*on vrée la remarque parcelle*/
-
-		var remarqueDuClient = document.createElement('div');
-	remarqueDuClient.id ='remarqueDuClient';
-	var remarqueClientParent=document.getElementById('remarqueClient');
-
-	remarqueClientParent.appendChild(remarqueDuClient);
-
-	var remarqueClientText = document.createTextNode(avisClient);
-	remarqueDuClient.appendChild(remarqueClientText);
-
-
-
-
 
 
 	}
