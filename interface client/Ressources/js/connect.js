@@ -78,3 +78,35 @@ function executeJ() {
 function convertJP2() {
   socket.emit('findImagesName', 'Me too!');
 }
+
+
+
+function sendClientToBdd(name, firstname, number, adress, postalCode, city, mail){
+    socket.emit('clientName', name);
+    socket.emit('clientFirstname', firstname);
+    socket.emit('clientNumber', number);
+    socket.emit('clientAdress', adress);
+    socket.emit('clientPostalCode', postalCode);
+    socket.emit('clientCity', city);
+    socket.emit('clientMail', mail);
+}
+
+function sendClientToBdd2(precRot, nextRot, fumureName, rdt, avis, fertFarmStarName, anaSolName, bilanNames, cartoRdtName, daterecolte, semoirs, modeDestruction, remParcelle, compactions, adventices, maladies, ravageurs){
+    socket.emit('precRot', precRot);
+    socket.emit('nextRot', nextRot);
+    socket.emit('fumureName', fumureName);
+    socket.emit('rdt', rdt);
+    socket.emit('avis', avis);
+    socket.emit('fertFarmStarName', fertFarmStarName);
+    socket.emit('anaSolName', anaSolName);
+    socket.emit('bilanNames', bilanNames);
+    socket.emit('cartoRdtName', cartoRdtName);
+    socket.emit('daterecolte', daterecolte);
+    socket.emit('semoirs', semoirs);
+    socket.emit('modeDestruction', modeDestruction);
+    socket.emit('remParcelle', remParcelle);
+    socket.emit('compactions', compactions);
+    socket.emit('adventices', adventices);
+    socket.emit('maladies', maladies);
+    socket.emit('ravageurs', ravageurs);
+}
